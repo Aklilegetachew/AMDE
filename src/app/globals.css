@@ -21,6 +21,12 @@
 body {
   background-color: rgb(var(--background-main-rgb));
   color: rgb(var(--foreground-secondary-rgb));
+  
+  font-family: 'Lexend Deca',
+}
+
+.secondary-color {
+  background-color: rgb(var(--foreground-rgb));
 }
 
 @layer utilities {
