@@ -53,7 +53,7 @@ const AnimatedMenu: React.FC = () => {
       </button>
       <div
         ref={menuRef}
-        className={`fixed top-0 left-0 w-full h-full secondary-color   text-white flex item-center  transform transition-transform duration-500 ease-in-out ${
+        className={`fixed top-0 left-0 w-full h-full secondary-color text-white flex item-center  transform transition-transform duration-500 ease-in-out ${
           isOpen ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
         }`}
       >
