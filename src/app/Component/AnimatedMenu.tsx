@@ -10,6 +10,7 @@ import X from "../../../public/x.svg";
 
 const AnimatedMenu: React.FC = () => {
   const menuRef = useRef<HTMLDivElement | null>(null);
+  const listRef = useRef<HTMLDivElement | null>(null);
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -53,7 +54,7 @@ const AnimatedMenu: React.FC = () => {
       </button>
       <div
         ref={menuRef}
-        className={`fixed top-0 left-0 w-full h-full secondary-color text-white flex item-center  transform transition-transform duration-500 ease-in-out ${
+        className={`fixed top-0 left-0 w-full h-full secondary-color text-white flex item-center z-50  transform transition-transform duration-500 ease-in-out ${
           isOpen ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
         }`}
       >
@@ -69,8 +70,8 @@ const AnimatedMenu: React.FC = () => {
         <div className="w-full flex p-24 justify-between">
           <ul className="list-none pt-20 m-0 flex flex-col flex-grow flex-shrink-0 w-2/3">
             <hr />
-            <li className="font-lexend-deca text-4xl sm-below:text-xl font-medium leading-[65px] text-left">
-              <div className="flex flex-col">
+            <li className=" font-lexend-deca text-4xl sm-below:text-xl font-medium leading-[65px] text-left  hover: text-[#50d71e]">
+              <div className=" flex flex-col">
                 <a href="#">WHO WE ARE ?</a>
                 <a href="#">ስለ እኛ?</a>
               </div>

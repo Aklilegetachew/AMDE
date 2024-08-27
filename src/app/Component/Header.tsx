@@ -2,13 +2,12 @@ import React from "react";
 import Link from "next/link";
 
 import Logo from "../../../public/logo.svg";
-import HamburgerMenu from "../../../public/hamburger-menu.svg";
 import AnimatedMenu from './AnimatedMenu';
 
 const Header: React.FC = () => {
   return (
-    <header>
-      <nav className="w-full p-4 pb-32 flex justify-between items-center ">
+    <header className="h-[15vh]">
+      <nav className="w-full p-4 pb-1 flex justify-between items-center ">
         <div className="flex items-center">
         <AnimatedMenu />
         </div>
