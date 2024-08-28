@@ -7,8 +7,9 @@ const GetInTouch = () => {
         <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>
         <hr className="w-12 mx-auto mb-4 border-2 border-black" />
         <p className="max-w-2xl mx-auto">
-          We'd love to hear from you! Whether you have a question about our services,
-          need support, or want to explore collaboration opportunities, don't hesitate to reach out.
+          We&apos;d love to hear from you! Whether you have a question about our
+          services, need support, or want to explore collaboration
+          opportunities, don&apos;t hesitate to reach out.
         </p>
         <hr className="w-3/4 mx-auto mt-12 border-2 border-[#F5F5F5]" />
       </div>

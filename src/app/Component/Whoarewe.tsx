@@ -15,7 +15,7 @@ const Whoarewe: React.FC = () => {
           {/* Text Section */}
           <div className="flex flex-col p-6">
             <h2 className=" text-2xl font-normal mb-4 paragcolor">
-              AMDE CONSULTING ARCHITECTS & ENGINEERS
+              AMDE CONSULTING ARCHITECTS &amp; ENGINEERS
             </h2>
             <p className="font-lexend-deca text-base font-normal leading-[22.5px] paragcolor">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

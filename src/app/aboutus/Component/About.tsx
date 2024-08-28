@@ -13,7 +13,7 @@ const About: React.FC = () => {
       <div className="mt-8 md:mt-0 md:w-1/2 md:pl-12">
         <h2 className="text-4xl font-bold mb-4">ABOUT US</h2>
         <h3 className="text-2xl font-semibold mb-4">
-          AMDE CONSULTING ARCHITECTS & ENGINEERS
+          AMDE CONSULTING ARCHITECTS &amp; ENGINEERS
         </h3>
         <p className="text-gray-700 leading-relaxed">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
