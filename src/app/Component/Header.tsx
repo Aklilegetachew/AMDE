@@ -1,18 +1,40 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 import Logo from "../../../public/logo.svg";
-import AnimatedMenu from './AnimatedMenu';
+import AnimatedMenu from "./AnimatedMenu";
 
 const Header: React.FC = () => {
   return (
-    <header className="h-[15vh]">
-      <nav className="w-full p-4 pb-1 flex justify-between items-center ">
+    <header className="h-[15vh] sm:h-[8vh] md:h-[13vh]">
+      <nav className="w-full p-4 pb-1 flex justify-between items-center">
         <div className="flex items-center">
-        <AnimatedMenu />
+          
+          <AnimatedMenu />
         </div>
-        <div className="flex items-center">
-          <Logo className="w-26 h-auto mr-5 md:w-26 md:h-auto lg:w-30 lg:h-auto" />
+        <div className="flex items-center ml-auto">
+          {/* Logo */}
+          {/* <div className="relative w-56 sm:w-20 md:w-24 lg:w-26 xl:w-30 h-auto">
+            <Image
+              src="/logo.png"
+              alt="Selected Image"
+              width={250}
+              layout="fill"
+              objectFit="contain" // Use 'contain' to scale the image proportionally
+              className="grayscale-0"
+            />
+          </div> */}
+
+          <div className="flex-shrink-0">
+            <Image
+              src="/logo.svg"
+              alt="Logo"
+              width={50}
+              height={50}
+              className="sm:w-10 md:w-24 lg:w-26 xl:w-100 object-contain"
+            />
+          </div>
         </div>
       </nav>
     </header>

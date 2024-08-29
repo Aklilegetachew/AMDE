@@ -7,79 +7,89 @@ import OurWork from "./Component/OurWork";
 import Services from "./Component/Services";
 import GetInTouch from "./Component/GetInTouch";
 import Footer from "./Component/Footer";
+import { LayoutGrid } from "./Component/ui/layout-grid";
 export default function Home() {
-  interface ImageData {
-    src: string;
-    alt: string;
-  }
-  const images: ImageData[] = [
-    { src: "/Hillhouseinterior.jpg", alt: "Image 1" },
-    { src: "/meskelSquare2.jpg", alt: "Image 2" },
-    { src: "/mazegaja.jpg", alt: "Image 2" },
-    { src: "/Hillhouseinterior.jpg", alt: "Image 1" },
-    { src: "/mazegaja.jpg", alt: "Image 2" },
-    { src: "/meskelSquare2.jpg", alt: "Image 2" },
-    { src: "/Hillhousefront.jpg", alt: "Image 2" },
+  type Card = {
+    id: number;
+    content: JSX.Element | React.ReactNode | string;
+    className: string;
+    thumbnail: string;
+  };
+
+  const images: Card[] = [
+    {
+      id: 1,
+      content: <p>Image 1 Content</p>,
+      className: " row-span-3",
+      thumbnail: "/Hillhouseinterior.jpg",
+    },
+    {
+      id: 2,
+      content: <p>Image 2 Content</p>,
+      className: "row-span-2",
+      thumbnail: "/mazegaja.jpg",
+    },
+    {
+      id: 3,
+      content: <p>Image 3 Content</p>,
+      className: "row-span-3 object-bottom",
+      thumbnail: "/meskelSquare2.jpg",
+    },
+
+    {
+      id: 7,
+      content: <p>Image 7 Content</p>,
+      className: "row-span-3",
+      thumbnail: "/Hillhousefront.jpg",
+    },
+    {
+      id: 8,
+      content: <p>Image 8 Content</p>,
+      className: "row-span-2",
+      thumbnail: "/Greentowerinterior.jpg",
+    },
+    {
+      id: 10,
+      content: <p>Image 10 Content</p>,
+      className: "row-span-2",
+      thumbnail: "/Hillhouse.jpg",
+    },
+    {
+      id: 13,
+      content: <p>Image 13 Content</p>,
+      className: "col-span-2 row-span-3 object-bottom",
+      thumbnail: "/meskelSquarecrop.jpg",
+    },
+    {
+      id: 9,
+      content: <p>Image 9 Content</p>,
+      className: "row-span-2 row-span-3",
+      thumbnail: "/Greentowerinteriorside.jpg",
+    },
+
+    // {
+    //   id: 11,
+    //   content: <p>Image 11 Content</p>,
+    //   className: "",
+    //   thumbnail: "/Hillhouse2.jpg",
+    // },
+    // {
+    //   id: 12,
+    //   content: <p>Image 12 Content</p>,
+    //   className: "",
+    //   thumbnail: "/Hillhouseside.jpg",
+    // },
+
     // ... more images
   ];
 
   return (
-    <main className="h-screen">
+    <main className="min-h-screen min-w-full flex flex-col h-screen">
       <Header />
-      <div className="">
-        <div className="grid grid-cols-3 grid-rows-8 gap-0 h-full">
-          <div className="bg-red-200  row-span-6">
-            {" "}
-            <img
-              src={images[1].src}
-              alt={images[1].alt}
-              className="w-full h-full object-cover grayscale hover:grayscale-0 "
-            />
-          </div>
-          <div className="bg-yellow-300  row-span-3">
-            <img
-              src={images[6].src}
-              alt={images[6].alt}
-              className="w-full h-full object-cover grayscale hover:grayscale-0"
-            />
-          </div>
-          <div className="bg-gray-400 row-span-6 ">
-            <img
-              src={images[1].src}
-              alt={images[1].alt}
-              className="w-full h-full object-cover grayscale hover:grayscale-0"
-            />
-          </div>
-          <div className="bg-gray-200  row-span-5">
-            <img
-              src={images[0].src}
-              alt={images[0].alt}
-              className="w-full h-full object-cover grayscale hover:grayscale-0"
-            />
-          </div>
-          <div className="bg-gray-300  row-span-3">
-            <img
-              src={images[0].src}
-              alt={images[0].alt}
-              className="w-full h-full object-cover grayscale hover:grayscale-0 "
-            />
-          </div>
-          <div className="bg-gray-400  row-span-3">
-            <img
-              src={images[0].src}
-              alt={images[0].alt}
-              className="w-full h-full object-cover grayscale hover:grayscale-0 "
-            />
-          </div>
-          <div className="bg-gray-200">scroll down </div>
-        </div>
+      <div className="h-[89vh]">
+        <LayoutGrid cards={images} />
       </div>
-      <Whoarewe />
-      <OurWork />
-      <Services />
-      <GetInTouch />
       <Footer />
     </main>
-
   );
 }

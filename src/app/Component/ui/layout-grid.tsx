@@ -26,7 +26,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
   };
 
   return (
-    <div className="w-full h-full p-10 grid grid-cols-1 md:grid-cols-3  max-w-7xl mx-auto gap-4 relative">
+    <div className="w-full h-full  grid grid-cols-1 md:grid-cols-3  max-w-full  gap-0 relative ">
       {cards.map((card, i) => (
         <div key={i} className={cn(card.className, "")}>
           <motion.div
@@ -35,15 +35,15 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
               card.className,
               "relative overflow-hidden",
               selected?.id === card.id
-                ? "rounded-lg cursor-pointer absolute inset-0 h-1/2 w-full md:w-1/2 m-auto z-50 flex justify-center items-center flex-wrap flex-col"
+                ? " cursor-pointer absolute inset-0 h-1/2 w-full md:w-1/2 m-auto z-50 flex justify-center items-center flex-wrap flex-col"
                 : lastSelected?.id === card.id
-                ? "z-40 bg-white rounded-xl h-full w-full"
-                : "bg-white rounded-xl h-full w-full"
+                ? "z-40 bg-white  h-full w-full"
+                : "bg-white  h-full w-full"
             )}
             layoutId={`card-${card.id}`}
           >
             {selected?.id === card.id && <SelectedCard selected={selected} />}
-            <ImageComponent card={card} />
+            <ImageComponent card={card} isSelected={selected?.id === card.id} />
           </motion.div>
         </div>
       ))}
@@ -59,15 +59,23 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
   );
 };
 
-const ImageComponent = ({ card }: { card: Card }) => {
+const ImageComponent = ({
+  card,
+  isSelected,
+}: {
+  card: Card;
+  isSelected: boolean;
+}) => {
   return (
     <motion.img
       layoutId={`image-${card.id}-image`}
       src={card.thumbnail}
-      height="500"
-      width="500"
+      // className={cn(
+      //   "w-full h-full object-cover  absolute transition duration-200"
+      // )}
       className={cn(
-        "object-cover object-top absolute inset-0 h-full w-full transition duration-200"
+        "w-full h-full object-cover grayscale  absolute transition duration-200",
+        isSelected ? "grayscale-0" : "hover:grayscale-0"
       )}
       alt="thumbnail"
     />
@@ -84,7 +92,7 @@ const SelectedCard = ({ selected }: { selected: Card | null }) => {
         animate={{
           opacity: 0.6,
         }}
-        className="absolute inset-0 h-full w-full bg-black opacity-60 z-10"
+        className="absolute inset-0 h-full w-full z-10"
       />
       <motion.div
         layoutId={`content-${selected?.id}`}
@@ -104,9 +112,22 @@ const SelectedCard = ({ selected }: { selected: Card | null }) => {
           duration: 0.3,
           ease: "easeInOut",
         }}
-        className="relative px-8 pb-4 z-[70]"
+        className="relative px-0 pb-0 z-[70]"
       >
-        {selected?.content}
+        {/* {selected?.content} */}
+
+        <Image
+          src={selected?.thumbnail || ""}
+          alt="Selected Image"
+          layout="fill"
+          objectFit="cover"
+          className="grayscale-0"
+        />
+        {selected?.content && (
+          <div className="absolute bottom-0 left-0 p-4 bg-black bg-opacity-50 text-white w-full">
+            {selected?.content}
+          </div>
+        )}
       </motion.div>
     </div>
   );
