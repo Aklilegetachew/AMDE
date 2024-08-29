@@ -120,7 +120,7 @@ const AnimatedMenu: React.FC = () => {
           </ul>
           <div className="flex items-end justify-end w-1/4">
             <BackgroundOverlay className=" absolute top-20 right-0 bg-cover bg-center" />
-            <Socials />
+            <Socials className="display-none" />
           </div>
         </div>
       </div>

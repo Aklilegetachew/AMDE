@@ -7,10 +7,10 @@ const Footer: React.FC = () => {
         <img
           src="/logo-namesmall.svg"
           alt="AMDE Consulting Architects &amp; Engineers"
-          className="w-64 h-10"
+          className="w-24 h-10 md:w-64"
         />
-        <div className="flex items-center justify-between">
-          <p className="text-white text-sm font-normal">
+        <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-between p-2">
+          <p className="text-white text-center text-xs sm:text-sm lg:text-base font-normal">
             &copy; {new Date().getFullYear()} Copyright 2024 AMDE Consulting
             Architects &amp; Engineers
           </p>
