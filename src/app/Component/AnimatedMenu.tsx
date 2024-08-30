@@ -166,10 +166,12 @@ const AnimatedMenu: React.FC = () => {
               </Link>
             </li>
             <li className="font-lexend-deca text-[#727272] text-4xl sm-below:text-1xl font-medium leading-[65px] text-left hover:text-[#F5F5F5]">
-              <div className="flex flex-col  justify-center items-center lg:justify-start lg:items-start border-y border-[#727272] ">
-                <a href="#">OUR WORKS</a>
-                <a href="#">ስራዎቻችን</a>
-              </div>
+              <Link href="/ourwork" passHref>
+                <div className="flex flex-col  justify-center items-center lg:justify-start lg:items-start border-y border-[#727272] ">
+                  <span>OUR WORKS</span>
+                  <span>ስራዎቻችን</span>
+                </div>
+              </Link>
             </li>
             <li className="font-lexend-deca text-[#727272] text-4xl sm-below:text-1xl font-medium leading-[65px] text-left hover:text-[#F5F5F5]">
               <div className="flex flex-col  justify-center items-center lg:justify-start lg:items-start border-y border-[#727272] ">
