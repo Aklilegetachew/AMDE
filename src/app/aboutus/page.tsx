@@ -1,5 +1,5 @@
 import Image from "next/image";
-import PageHeading from "./Component/PageHeading";
+import PageHeading from "../Component/PageHeading";
 import About from "./Component/About";
 import Divider from "./Component/Divider";
 import Founders from "./Component/Founders";
@@ -11,7 +11,7 @@ export default function AboutUs() {
   return (
     <main>
       <Header />
-      <PageHeading />
+      <PageHeading amharictitle="ስለ እኛ" title="WHO WE ARE" />
       <About />
       <Divider />
       <Founders />
