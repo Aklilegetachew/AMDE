@@ -1,51 +1,65 @@
-import React from "react";
-import Image from "next/image";
-import { motion } from "framer-motion"; // For smooth animations (optional)
-
-interface ImageProps {
-  src: string;
-  alt: string;
-  width: number;
-  height: number;
+interface ContentSectionProps {
+  title: string;
+  paragraph: string;
+  imageSrc: string;
+  imageAlt: string;
+  imageSide: "left" | "right";
+  serviceImg: string; // Side of the image
 }
 
-const DesignPage = () => {
+const ContentTwoByOne: React.FC<ContentSectionProps> = ({
+  title,
+  paragraph,
+  imageSrc,
+  imageAlt,
+  imageSide,
+  serviceImg,
+}) => {
   return (
-    <div className="container mx-auto py-16">
-      <h2 className="text-3xl font-bold text-center mb-8">SERVICES</h2>
-      <div className="flex justify-center items-center">
-        <Image
-          src="/Consulting.png"
-          alt="Brain Icon"
-          width={100}
-          height={100}
-        />
-        <p className="ml-4">SOME DESIGN SERVICE</p>
+    <div className="paper">
+      <div className="justify-center text-center m-6 p-6 text-3xl font-bold paragcolor">
+        {title}
       </div>
 
-      <h3 className="text-2xl font-semibold mt-16">CONSULTING</h3>
-      <div className="flex justify-between">
-        <Image
-          src="/Hillhouse.jpg"
-          alt="Building Image"
-          width={300}
-          height={200}
-        />
-        <p>SOME DESIGN SERVICE</p>
-      </div>
+      <div className="container m-6 mx-auto p-4">
+        <div className={`grid grid-cols-1 md:grid-cols-2 gap-8`}>
+          {imageSide === "left" && (
+            <div className="relative flex justify-center items-center">
+              <img
+                src={imageSrc}
+                alt={imageAlt}
+                className="w-74 h-auto object-cover border border-gray-200 m-6 mb-20"
+              />
+            </div>
+          )}
 
-      <h3 className="text-2xl font-semibold mt-16">ARCHITECTURAL DESIGN</h3>
-      <div className="flex justify-between">
-        <Image
-          src="/house-sketch.png"
-          alt="House Sketch"
-          width={300}
-          height={200}
-        />
-        <p>SOME DESIGN SERVICE</p>
+          <div className="flex flex-col p-6 justify-center items-center">
+            <img
+              src={serviceImg}
+              alt={imageAlt}
+              className="w-24 h-34 object-cover border border-gray-200 m-6 mb-10"
+            />
+            <p className="w-[80%] text-base font-bold leading-[22.5px] paragcolor text-center">
+              AMDE CONSULTING ARCHITECTS &amp; ENGINEERS
+            </p>
+            <p className=" w-[70%] text-base font-normal leading-[22.5px] paragcolor text-center">
+              {paragraph}
+            </p>
+          </div>
+
+          {imageSide === "right" && (
+            <div className="relative flex justify-center items-center">
+              <img
+                src={imageSrc}
+                alt={imageAlt}
+                className="w-74 h-auto object-cover border border-gray-200 m-6 mb-10"
+              />
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
 };
 
-export default DesignPage;
+export default ContentTwoByOne;

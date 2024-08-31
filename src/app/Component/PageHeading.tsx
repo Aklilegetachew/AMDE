@@ -15,7 +15,7 @@ const PageHeading: React.FC<PageHeadingProps> = ({ amharictitle, title }) => {
       <div className="relative z-10 flex flex-col items-center justify-between h-full text-white">
         <div className=" w-full mt-8 grid m-4 justify-center items-center">
           <span className="text-5xl font-bold align-text-center">{title}</span>
-          <span className="text-2xl mt-4 font-bold text-center text-[#727272]">
+          <span className="text-3xl mt-4 font-bold text-center text-[#727272]">
             {amharictitle}
           </span>
         </div>
