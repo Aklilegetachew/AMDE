@@ -24,14 +24,15 @@ const Header: React.FC = () => {
               className="grayscale-0"
             />
           </div> */}
-
-          <div className="flex-shrink-0">
-            <img
-              src="/logo.svg"
-              alt="Logo"
-              className="w-12 h-auto  md:w-16 lg:w-20 xl:w-22 object-contain"
-            />
-          </div>
+          <Link href="/" passHref>
+            <div className="flex-shrink-0">
+              <img
+                src="/logo.svg"
+                alt="Logo"
+                className="w-12 h-auto  md:w-16 lg:w-20 xl:w-22 object-contain"
+              />
+            </div>
+          </Link>
         </div>
       </nav>
     </header>

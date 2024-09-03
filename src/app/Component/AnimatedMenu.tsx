@@ -129,23 +129,22 @@ const AnimatedMenu: React.FC = () => {
       >
         <nav className=" fixed w-full top-8 left-0 px-10   flex justify-between items-center">
           <button onClick={toggleMenu} className="flex items-center">
-          
             <img
               src="/x.svg"
               alt="Logo"
               className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 object-contain"
             />
-           
           </button>
 
-       
-          <div className="flex items-center ">
-            <img
-              src="/logo-gray.svg"
-              alt="Logo"
-              className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 object-contain"
-            />
-          </div>
+          <Link href="/" passHref>
+            <div className="flex items-center ">
+              <img
+                src="/logo-gray.svg"
+                alt="Logo"
+                className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 object-contain"
+              />
+            </div>
+          </Link>
         </nav>
         <div className="w-full md:flex p-10 sm-below:px-4 sm-below:justify-between sm-below: justify-between sm:p-24 ">
           <ul className="list-none pt-20 m-0 flex flex-col w-full flex-grow flex-shrink-0 lg:w-2/3 sm-below:h-[70%]">
