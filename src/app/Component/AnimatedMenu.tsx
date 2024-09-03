@@ -22,8 +22,8 @@ const AnimatedMenu: React.FC = () => {
       const listItems = document.querySelectorAll("ul li");
 
       listItems.forEach((item) => {
-        const smallScreenFontSize = "1em";
-        const smallScreenHoverFontSize = "1.5em";
+        const smallScreenFontSize = "1.5em";
+        const smallScreenHoverFontSize = "2em";
         const largeScreenFontSize = "3em";
         const largeScreenHoverFontSize = "3.5em";
 
@@ -129,24 +129,16 @@ const AnimatedMenu: React.FC = () => {
       >
         <nav className=" fixed w-full top-8 left-0 px-10   flex justify-between items-center">
           <button onClick={toggleMenu} className="flex items-center">
-            {/* <Image
-              src="/x.svg"
-              alt="Logo"
-             
-              className="sm:w-8 md:w-18 lg:w-16 xl:w-24 object-contain"
-            /> */}
-
+          
             <img
               src="/x.svg"
               alt="Logo"
               className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 object-contain"
             />
-            {/* <X className="sm:w-10 md:w-24 lg:w-26 xl:w-100" /> */}
+           
           </button>
 
-          {/* <div className="flex items-center">
-            <Logo className="w-24 h-auto sm-below:w-16 mr-5 md:w-26 md:h-auto lg:w-30 lg:h-auto" />
-          </div> */}
+       
           <div className="flex items-center ">
             <img
               src="/logo-gray.svg"
@@ -157,15 +149,15 @@ const AnimatedMenu: React.FC = () => {
         </nav>
         <div className="w-full md:flex p-10 sm-below:px-4 sm-below:justify-between sm-below: justify-between sm:p-24 ">
           <ul className="list-none pt-20 m-0 flex flex-col w-full flex-grow flex-shrink-0 lg:w-2/3 sm-below:h-[70%]">
-            <li className="font-lexend-deca text-[#727272] text-4xl sm-below:text-2xl font-medium sm-below:leading-10 leading-[65px] text-left  hover:text-[#F5F5F5]">
+            <li className="font-lexend-deca text-[#727272] text-4xl sm-below:text-3xl font-bold sm-below:leading-10 leading-[65px] text-left  hover:text-[#F5F5F5]">
               <Link href="/aboutus" passHref>
-                <div className="flex flex-col  justify-center items-center lg:justify-start lg:items-start border-y border-[#727272] ">
+                <div className="flex flex-col justify-center items-center lg:justify-start lg:items-start border-y border-[#727272] ">
                   <span>WHO WE ARE ?</span>
                   <span>ስለ እኛ?</span>
                 </div>
               </Link>
             </li>
-            <li className="font-lexend-deca text-[#727272] text-4xl sm-below:text-1xl font-medium leading-[65px] text-left hover:text-[#F5F5F5]">
+            <li className="font-lexend-deca text-[#727272] text-4xl sm-below:text-xl font-medium leading-[65px] text-left hover:text-[#F5F5F5]">
               <Link href="/ourwork" passHref>
                 <div className="flex flex-col  justify-center items-center lg:justify-start lg:items-start border-y border-[#727272] ">
                   <span>OUR WORKS</span>
@@ -173,7 +165,7 @@ const AnimatedMenu: React.FC = () => {
                 </div>
               </Link>
             </li>
-            <li className="font-lexend-deca text-[#727272] text-4xl sm-below:text-1xl font-medium leading-[65px] text-left hover:text-[#F5F5F5]">
+            <li className="font-lexend-deca text-[#727272] text-4xl sm-below:text-xl font-medium leading-[65px] text-left hover:text-[#F5F5F5]">
               <Link href="/ourServices" passHref>
                 <div className="flex flex-col  justify-center items-center lg:justify-start lg:items-start border-y border-[#727272] ">
                   <span>Services</span>
@@ -181,7 +173,7 @@ const AnimatedMenu: React.FC = () => {
                 </div>
               </Link>
             </li>
-            <li className="font-lexend-deca text-[#727272] text-4xl sm-below:text-1xl font-medium leading-[65px] text-left hover:text-[#F5F5F5]">
+            <li className="font-lexend-deca text-[#727272] text-4xl sm-below:text-xl font-medium leading-[65px] text-left hover:text-[#F5F5F5]">
               <div className="flex flex-col justify-center items-center lg:justify-start lg:items-start border-y border-[#727272] ">
                 <a href="#">GET IN TOUCH</a>
                 <a href="#">በዚህ ያግኙን</a>
@@ -189,7 +181,7 @@ const AnimatedMenu: React.FC = () => {
             </li>
             <hr className="border-[#727272] hover:border-[#F5F5F5]" />
           </ul>
-          <div className="flex  items-end justify-end lg:w-1/4 sm-below:my-8">
+          <div className="flex  items-end justify-end lg:w-1/4 sm-below:my-32">
             <BackgroundOverlay className="z-[-1] absolute top-20 right-0 bg-cover bg-center" />
             <div className=" pt-6 block sm:hidden">
               <Socials alignment="row" />

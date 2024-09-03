@@ -10,7 +10,6 @@ const Header: React.FC = () => {
     <header className="h-[15vh] sm:h-[8vh] md:h-[13vh]">
       <nav className="w-full p-4 pb-1 flex justify-between items-center">
         <div className="flex items-center">
-          
           <AnimatedMenu />
         </div>
         <div className="flex items-center ml-auto">
@@ -27,12 +26,10 @@ const Header: React.FC = () => {
           </div> */}
 
           <div className="flex-shrink-0">
-            <Image
+            <img
               src="/logo.svg"
               alt="Logo"
-              width={50}
-              height={50}
-              className="sm:w-10 md:w-24 lg:w-26 xl:w-100 object-contain"
+              className="w-12 h-auto  md:w-16 lg:w-20 xl:w-22 object-contain"
             />
           </div>
         </div>

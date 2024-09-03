@@ -14,6 +14,7 @@ export default function Home() {
     content: JSX.Element | React.ReactNode | string;
     className: string;
     thumbnail: string;
+    name: string;
   };
 
   const images: Card[] = [
@@ -21,19 +22,22 @@ export default function Home() {
       id: 1,
       content: <p>Image 1 Content</p>,
       className: " row-span-3",
-      thumbnail: "/Hillhouseinterior.jpg",
+      thumbnail: "/designprototype.jpg",
+      name: "Test",
     },
     {
       id: 2,
       content: <p>Image 2 Content</p>,
       className: "row-span-2",
-      thumbnail: "/mazegaja.jpg",
+      thumbnail: "/designbuilding.jpg",
+      name: "Test",
     },
     {
       id: 3,
       content: <p>Image 3 Content</p>,
       className: "row-span-3 object-bottom",
       thumbnail: "/meskelSquare2.jpg",
+      name: "Test",
     },
 
     {
@@ -41,38 +45,44 @@ export default function Home() {
       content: <p>Image 7 Content</p>,
       className: "row-span-3",
       thumbnail: "/Hillhousefront.jpg",
+      name: "Test",
     },
     {
       id: 8,
       content: <p>Image 8 Content</p>,
       className: "row-span-2",
       thumbnail: "/Greentowerinterior.jpg",
+      name: "Test",
     },
     {
       id: 10,
       content: <p>Image 10 Content</p>,
       className: "row-span-2",
       thumbnail: "/Hillhouse.jpg",
+      name: "Test",
     },
     {
       id: 13,
       content: <p>Image 13 Content</p>,
-      className: "col-span-2 row-span-3 object-bottom",
+      className: " row-span-3 object-bottom",
       thumbnail: "/meskelSquarecrop.jpg",
+      name: "Test",
     },
     {
       id: 9,
       content: <p>Image 9 Content</p>,
       className: "row-span-2 row-span-3",
-      thumbnail: "/Greentowerinteriorside.jpg",
+      thumbnail: "/design4.jpg",
+      name: "Test",
     },
 
-    // {
-    //   id: 11,
-    //   content: <p>Image 11 Content</p>,
-    //   className: "",
-    //   thumbnail: "/Hillhouse2.jpg",
-    // },
+    {
+      id: 11,
+      content: <p>Image 11 Content</p>,
+      className: "row-span-2 row-span-3",
+      thumbnail: "/Hillhouse2.jpg",
+      name: "Test",
+    },
     // {
     //   id: 12,
     //   content: <p>Image 12 Content</p>,
@@ -86,7 +96,7 @@ export default function Home() {
   return (
     <main className="min-h-screen min-w-full flex flex-col h-screen">
       <Header />
-      <div className="h-[89vh]">
+      <div className="sm:h-[89vh]">
         <LayoutGrid cards={images} />
       </div>
       <Footer />
