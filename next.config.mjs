@@ -9,6 +9,10 @@ const nextConfig = {
 
     return config;
   },
+  i18n: {
+    locales: ["en", "am"], // 'en' for English, 'am' for Amharic
+    defaultLocale: "en",
+  },
 };
 
 export default nextConfig;

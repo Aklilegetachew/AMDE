@@ -8,7 +8,9 @@ import Services from "./Component/Services";
 import GetInTouch from "./Component/GetInTouch";
 import Footer from "./Component/Footer";
 import { LayoutGrid } from "./Component/ui/layout-grid";
-export default function Home() {
+import appWithTranslation from "../../i18n";
+
+const Home = () => {
   type Card = {
     id: number;
     content: JSX.Element | React.ReactNode | string;
@@ -102,4 +104,5 @@ export default function Home() {
       <Footer />
     </main>
   );
-}
+};
+export default Home;
