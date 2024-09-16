@@ -1,5 +1,5 @@
 import React from "react";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
 const About: React.FC = () => {
   return (
@@ -17,16 +17,22 @@ const About: React.FC = () => {
           AMDE CONSULTING ARCHITECTS &amp; ENGINEERS
         </h3>
         <p className="text-gray-700 leading-relaxed">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          AMDE Architects & Engineers is an architectural design and engineering
+          firm based in Addis Ababa, Ethiopia. Our focus lies in Architectural
+          and Urban design, allowing us to navigate seamlessly from large-scale
+          projects to intricate details. We pay attention to even the smallest
+          details, ensuring a holistic approach to design. Our portfolio
+          encompasses both public and private spaces, with a strong commitment
+          to simplicity.
         </p>
         <p className="text-gray-700 leading-relaxed mt-4">
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est
-          laborum.
+          At AMDE, we center our designs around bringing people closer to the
+          natural environment for a calm and peaceful atmosphere. We reimagine
+          and recreate living environments while staying true to our clients&apos;
+          vision and remaining genuine to the local language. We love what we do
+          and harness the full potential of our team to deliver outstanding
+          project outcomes. Clear, honest, and consistent communication drives
+          the materialization of our client&apos;s needs.
         </p>
       </div>
     </section>

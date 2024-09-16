@@ -84,12 +84,14 @@ const AnimatedMenu: React.FC = () => {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-
+    // ${
+    //   isOpen ? "translate-x-0 opacity-100" : ""
+    // }
     if (menuRef.current) {
       if (isOpen) {
         gsap.to(menuRef.current, {
           duration: 0.5,
-          x: "-100%",
+          x: "100%",
           opacity: 0,
           ease: "power2.inOut",
         });
@@ -97,7 +99,7 @@ const AnimatedMenu: React.FC = () => {
         gsap.fromTo(
           menuRef.current,
           {
-            x: "-100%",
+            x: "100%",
             opacity: 0,
           },
           {
@@ -115,17 +117,23 @@ const AnimatedMenu: React.FC = () => {
     <div>
       <button
         onClick={toggleMenu}
-        className="bg-transparent border-none cursor-pointer text-2xl md:text-3xl lg:text-4xl"
+        className="z-51 bg-transparent border-none cursor-pointer text-2xl md:text-3xl lg:text-4xl"
       >
-        <span>
-          <HamburgerMenu />
-        </span>
+        {isOpen ? (
+          <img
+            src="/x.svg"
+            alt="Logo"
+            className="bg-white w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 object-contain"
+          />
+        ) : (
+          <span>
+            <HamburgerMenu />
+          </span>
+        )}
       </button>
       <div
         ref={menuRef}
-        className={`fixed top-0 left-0 w-full h-full secondary-color text-white flex item-center z-50  transform transition-transform duration-500 ease-in-out ${
-          isOpen ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
-        }`}
+        className={`fixed top-0 left-0 w-full h-full secondary-color text-white flex item-center z-50  transform transition-transform duration-500 ease-in-out translate-x-full opacity-0`}
       >
         <nav className=" fixed w-full top-8 left-0 px-10   flex justify-between items-center">
           <button onClick={toggleMenu} className="flex items-center">
@@ -148,14 +156,17 @@ const AnimatedMenu: React.FC = () => {
         </nav>
         <div className="w-full md:flex p-10 sm-below:px-4 sm-below:justify-between sm-below: justify-between sm:p-24 ">
           <ul className="list-none pt-20 m-0 flex flex-col w-full flex-grow flex-shrink-0 lg:w-2/3 sm-below:h-[70%]">
-            <li className="font-lexend-deca text-[#727272] text-4xl sm-below:text-3xl font-bold sm-below:leading-10 leading-[65px] text-left  hover:text-[#F5F5F5]">
-              <Link href="/aboutus" passHref>
-                <div className="flex flex-col justify-center items-center lg:justify-start lg:items-start border-y border-[#727272] ">
-                  <span>WHO WE ARE ?</span>
-                  <span>ስለ እኛ?</span>
-                </div>
-              </Link>
-            </li>
+            <div ref={listRef}>
+              {" "}
+              <li className="font-lexend-deca text-[#727272] text-4xl sm-below:text-3xl font-bold sm-below:leading-10 leading-[65px] text-left  hover:text-[#F5F5F5]">
+                <Link href="/aboutus" passHref>
+                  <div className="flex flex-col justify-center items-center lg:justify-start lg:items-start border-y border-[#727272] ">
+                    <span>WHO WE ARE ?</span>
+                    <span>ስለ እኛ?</span>
+                  </div>
+                </Link>
+              </li>
+            </div>
             <li className="font-lexend-deca text-[#727272] text-4xl sm-below:text-xl font-medium leading-[65px] text-left hover:text-[#F5F5F5]">
               <Link href="/ourwork" passHref>
                 <div className="flex flex-col  justify-center items-center lg:justify-start lg:items-start border-y border-[#727272] ">

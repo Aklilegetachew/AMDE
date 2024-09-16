@@ -8,7 +8,7 @@ interface PageHeadingProps {
 const PageHeading: React.FC<PageHeadingProps> = ({ amharictitle, title }) => {
   return (
     <section
-      className="relative w-full h-[350px] bg-[#606060] mt-6 bg-[url('/GroupLogo.png')] bg-contain bg-right bg-no-repeat"
+      className="relative w-full h-[350px] bg-[#606060] mt-16 md:mt-24 bg-[url('/GroupLogo.png')] bg-contain bg-right bg-no-repeat"
       // style={{ backgroundImage: `url(${imageUrl})` }}
     >
       {/* <div className="absolute inset-0 bg-black opacity-20"></div> */}

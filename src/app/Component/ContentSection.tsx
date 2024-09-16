@@ -37,8 +37,8 @@ const ContentSection: React.FC<ContentSectionProps> = ({
           )}
 
           <div className="flex flex-col p-6">
-            <h2 className=" text-2xl font-normal mb-4 paragcolor">
-              AMDE CONSULTING ARCHITECTS &amp; ENGINEERS
+            <h2 className=" text-2xl mb-4 font-bold from-neutral-800">
+              {title}
             </h2>
             <p className="font-lexend-deca text-base font-normal leading-[22.5px] paragcolor">
               {paragraph}
