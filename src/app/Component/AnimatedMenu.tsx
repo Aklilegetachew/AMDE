@@ -155,7 +155,7 @@ const AnimatedMenu: React.FC = () => {
           </Link>
         </nav>
         <div className="w-full md:flex p-10 sm-below:px-4 sm-below:justify-between sm-below: justify-between sm:p-24 ">
-          <ul className="list-none pt-20 m-0 flex flex-col w-full flex-grow flex-shrink-0 lg:w-2/3 sm-below:h-[70%]">
+          <ul className="list-none mt-20 flex flex-col w-full flex-grow flex-shrink-0 lg:w-2/3 sm-below:h-[70%] lg:mb-14 lg:mt-5">
             <div ref={listRef}>
               {" "}
               <li className="font-lexend-deca text-[#727272] text-4xl sm-below:text-3xl font-bold sm-below:leading-10 leading-[65px] text-left  hover:text-[#F5F5F5]">

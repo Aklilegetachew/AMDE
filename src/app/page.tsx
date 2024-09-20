@@ -4,6 +4,8 @@ import { gsap } from "gsap";
 import Header from "./Component/Header";
 import Footer from "./Component/Footer";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Link from "next/link";
+import PageTransition from "./Component/ui/PageTransition";
 
 // Ensure GSAP plugins are registered only on the client side
 if (typeof window !== "undefined") {
@@ -17,6 +19,7 @@ const Home = () => {
     className: string;
     thumbnail: string;
     name: string;
+    link: string;
   };
 
   const images: Card[] = [
@@ -26,6 +29,7 @@ const Home = () => {
       className: "row-span-3",
       thumbnail: "/designprototype.jpg",
       name: "Test",
+      link: "/ourwork#meskel-square",
     },
     {
       id: 2,
@@ -33,6 +37,7 @@ const Home = () => {
       className: "row-span-2",
       thumbnail: "/designbuilding.jpg",
       name: "Test",
+      link: "/ourwork#Green-Ladder",
     },
     {
       id: 7,
@@ -40,6 +45,7 @@ const Home = () => {
       className: "row-span-3",
       thumbnail: "/Hillhousefront.jpg",
       name: "Test",
+      link: "/ourwork#hill-house",
     },
     {
       id: 3,
@@ -47,6 +53,7 @@ const Home = () => {
       className: "row-span-3 object-bottom",
       thumbnail: "/meskelSquare2.jpg",
       name: "Test",
+      link: "/ourwork#meskel-square",
     },
     {
       id: 8,
@@ -54,6 +61,7 @@ const Home = () => {
       className: "row-span-2",
       thumbnail: "/Greentowerinterior.jpg",
       name: "Test",
+      link: "/ourwork#green-tower-in",
     },
     {
       id: 10,
@@ -61,6 +69,7 @@ const Home = () => {
       className: "row-span-2",
       thumbnail: "/Hillhouse.jpg",
       name: "Test",
+      link: "/ourwork#hill-house-int",
     },
     {
       id: 13,
@@ -68,6 +77,7 @@ const Home = () => {
       className: "row-span-3 object-bottom",
       thumbnail: "/meskelSquarecrop.jpg",
       name: "Test",
+      link: "/ourwork#meskel-square",
     },
     {
       id: 9,
@@ -75,6 +85,7 @@ const Home = () => {
       className: "row-span-2 row-span-3",
       thumbnail: "/design4.jpg",
       name: "Test",
+      link: "/ourwork#Green-Ladder",
     },
     {
       id: 11,
@@ -82,6 +93,7 @@ const Home = () => {
       className: "row-span-2 row-span-3",
       thumbnail: "/Hillhouse2.jpg",
       name: "Test",
+      link: "/ourwork#Hill House",
     },
   ];
 
@@ -113,19 +125,24 @@ const Home = () => {
       <Header />
       <div className="mt-24 h-full">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-0 h-full">
-          {images.map((image) => (
-            <div
-              key={image.id}
-              className={`${image.className} flex justify-center items-center image`} // Add the 'image' class to the div
-            >
-              <img
-                src={image.thumbnail}
-                alt={image.name}
-                className="w-full h-full object-cover grayscale hover:grayscale-0"
-              />
-             
-            </div>
-          ))}
+        
+            {images.map((image) => (
+              <Link
+                href={image.link}
+                passHref
+                key={image.id}
+                className={`${image.className} flex justify-center items-center image`} // Add the 'image' class to the div
+              >
+                {/* <Link href={image.link} passHref> */}
+                <img
+                  src={image.thumbnail}
+                  alt={image.name}
+                  className="w-full h-full object-cover grayscale hover:grayscale-0"
+                />
+                {/* </Link> */}
+              </Link>
+            ))}
+          
         </div>
       </div>
       <Footer />
