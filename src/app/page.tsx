@@ -1,10 +1,13 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { gsap } from "gsap";
 import Header from "./Component/Header";
 import Footer from "./Component/Footer";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Lexend_Deca } from "@next/font/google";
+import Link from "next/link";
+import { ParallaxScroll } from "./Component/ui/parallax-scroll";
+
+import { Lexend_Deca } from "next/font/google";
 
 // Ensure GSAP plugins are registered only on the client side
 if (typeof window !== "undefined") {
@@ -22,15 +25,25 @@ const Home = () => {
     className: string;
     thumbnail: string;
     name: string;
+    link: string;
   };
 
   const images: Card[] = [
+    {
+      id: 12,
+      content: <p>Image 1 Content</p>,
+      className: "row-span-3",
+      thumbnail: "/designprototype.jpg",
+      name: "Test",
+      link: "/ourwork#meskel-square",
+    },
     {
       id: 1,
       content: <p>Image 1 Content</p>,
       className: "row-span-3",
       thumbnail: "/designprototype.jpg",
       name: "Test",
+      link: "/ourwork#meskel-square",
     },
     {
       id: 2,
@@ -38,6 +51,7 @@ const Home = () => {
       className: "row-span-2",
       thumbnail: "/designbuilding.jpg",
       name: "Test",
+      link: "/ourwork#Green-Ladder",
     },
     {
       id: 7,
@@ -45,6 +59,7 @@ const Home = () => {
       className: "row-span-3",
       thumbnail: "/Hillhousefront.jpg",
       name: "Test",
+      link: "/ourwork#hill-house",
     },
     {
       id: 3,
@@ -52,6 +67,7 @@ const Home = () => {
       className: "row-span-3 object-bottom",
       thumbnail: "/meskelSquare2.jpg",
       name: "Test",
+      link: "/ourwork#meskel-square",
     },
     {
       id: 8,
@@ -59,6 +75,7 @@ const Home = () => {
       className: "row-span-2",
       thumbnail: "/Greentowerinterior.jpg",
       name: "Test",
+      link: "/ourwork#green-tower-in",
     },
     {
       id: 10,
@@ -66,6 +83,7 @@ const Home = () => {
       className: "row-span-2",
       thumbnail: "/Hillhouse.jpg",
       name: "Test",
+      link: "/ourwork#hill-house-int",
     },
     {
       id: 13,
@@ -73,6 +91,7 @@ const Home = () => {
       className: "row-span-3 object-bottom",
       thumbnail: "/meskelSquarecrop.jpg",
       name: "Test",
+      link: "/ourwork#meskel-square",
     },
     {
       id: 9,
@@ -80,6 +99,7 @@ const Home = () => {
       className: "row-span-2 row-span-3",
       thumbnail: "/design4.jpg",
       name: "Test",
+      link: "/ourwork#Green-Ladder",
     },
     {
       id: 11,
@@ -87,53 +107,48 @@ const Home = () => {
       className: "row-span-2 row-span-3",
       thumbnail: "/Hillhouse2.jpg",
       name: "Test",
+      link: "/ourwork#Hill House",
     },
   ];
+  const imageUrls = images.map((image) => image.thumbnail);
+  const [scrollPosition, setScrollPosition] = useState(0);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      // Animate each image as it scrolls into view
-      gsap.fromTo(
-        ".image", // Now selecting the correct elements with the class 'image'
-        { opacity: 0, scale: 0.8 }, // Start with images transparent and scaled down
-        {
-          opacity: 1,
-          scale: 1,
-          duration: 1,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: ".image",
-            start: "top 80%", // Start the animation when the image is 80% from the top of the viewport
-            end: "top 20%", // End the animation when it reaches 20% from the top
-            toggleActions: "play none none none", // Play once when scrolling into view
-            scrub: true,
-          },
-        }
-      );
-    }
-  }, [images]);
+    const handleScroll = () => {
+      setScrollPosition(window.scrollX);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <main className={`${lexendDeca.className} min-w-full flex flex-col h-auto`}>
-      <Header />
-      <div className="mt-52 h-full">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-0 h-full">
-          {images.map((image) => (
-            <div
-              key={image.id}
-              className={`${image.className} flex justify-center items-center image`} // Add the 'image' class to the div
-            >
-              <img
-                src={image.thumbnail}
-                alt={image.name}
-                className="w-full h-full object-cover grayscale hover:grayscale-0"
-              />
-            </div>
-          ))}
-        </div>
-      </div>
-      <Footer />
+    <main
+      className={`${lexendDeca.className} min-w-full flex flex-col h-[70rem]`}
+    >
+      <ParallaxScroll images={imageUrls} className="custom-scroll mt-36" />
     </main>
+
+    // <Header />
+    //
+    // <div className="mt-52 h-full">
+    //   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-0 h-full">
+    //     {images.map((image) => (
+    //       <Link
+    //         href={image.link}
+    //         passHref
+    //         key={image.id}
+    //         className={`${image.className} flex justify-center items-center image`}
+    //       >
+    //         <img
+    //           src={image.thumbnail}
+    //           alt={image.name}
+    //           className="w-full h-full object-cover grayscale hover:grayscale-0"
+    //         />
+    //       </Link>
+    //     ))}
+    //   </div>
+    // </div>
+    // <Footer />
   );
 };
 
