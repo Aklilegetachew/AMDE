@@ -2,7 +2,9 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
-import HamburgerMenu from "../../../public/hamburger-menu.svg";
+// import HamburgerMenu from "../../../public/hamburger-menu.svg";
+import HamburgerMenu from "../../../public/ham-thin1.svg";
+// import HamburgerMenu from "../../../public/ham-tin.svg";
 import BackgroundOverlay from "../../../public/backgroudoverlay.svg";
 import Socials from "./Socials";
 import Logo from "../../../public/logo-gray.svg";
@@ -27,7 +29,6 @@ const AnimatedMenu: React.FC = () => {
         const largeScreenFontSize = "3em";
         const largeScreenHoverFontSize = "3.5em";
 
-        // Set initial state based on screen size
         gsap.fromTo(
           item,
           {
@@ -119,26 +120,30 @@ const AnimatedMenu: React.FC = () => {
         onClick={toggleMenu}
         className="z-51 bg-transparent border-none cursor-pointer text-2xl md:text-3xl lg:text-4xl"
       >
-        {isOpen ? (
+        {/* {isOpen ? (
           <img
-            src="/x.svg"
+            src="/close-thin.svg"
             alt="Logo"
             className="bg-white w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 object-contain"
           />
         ) : (
-          <span>
+          <span className="bg-red">
             <HamburgerMenu />
           </span>
-        )}
+        )} */}
+
+        <span className="bg-red">
+          <HamburgerMenu />
+        </span>
       </button>
       <div
         ref={menuRef}
         className={`fixed top-0 left-0 w-full h-full secondary-color text-white flex item-center z-50  transform transition-transform duration-500 ease-in-out translate-x-full opacity-0`}
       >
-        <nav className=" fixed w-full top-8 left-0 px-10   flex justify-between items-center">
+        <nav className=" fixed w-full top-8 left-0 px-6 flex justify-between items-center">
           <button onClick={toggleMenu} className="flex items-center">
             <img
-              src="/x.svg"
+              src="/close-thin.svg"
               alt="Logo"
               className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 object-contain"
             />
@@ -161,8 +166,8 @@ const AnimatedMenu: React.FC = () => {
               <li className="font-lexend-deca text-[#727272] text-4xl sm-below:text-3xl font-bold sm-below:leading-10 leading-[65px] text-left  hover:text-[#F5F5F5]">
                 <Link href="/aboutus" passHref>
                   <div className="flex flex-col justify-center items-center lg:justify-start lg:items-start border-y border-[#727272] ">
-                    <span>WHO WE ARE ?</span>
-                    <span>ስለ እኛ?</span>
+                    <span>WE ARE AMDE</span>
+                    <span>አምድ ነን</span>
                   </div>
                 </Link>
               </li>

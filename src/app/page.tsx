@@ -4,11 +4,16 @@ import { gsap } from "gsap";
 import Header from "./Component/Header";
 import Footer from "./Component/Footer";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Lexend_Deca } from "@next/font/google";
 
 // Ensure GSAP plugins are registered only on the client side
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
+const lexendDeca = Lexend_Deca({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"], // Optional: specify weights
+});
 
 const Home = () => {
   type Card = {
@@ -109,9 +114,9 @@ const Home = () => {
   }, [images]);
 
   return (
-    <main className="min-w-full flex flex-col h-auto">
+    <main className={`${lexendDeca.className} min-w-full flex flex-col h-auto`}>
       <Header />
-      <div className="mt-24 h-full">
+      <div className="mt-52 h-full">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-0 h-full">
           {images.map((image) => (
             <div
@@ -123,7 +128,6 @@ const Home = () => {
                 alt={image.name}
                 className="w-full h-full object-cover grayscale hover:grayscale-0"
               />
-             
             </div>
           ))}
         </div>

@@ -23,7 +23,7 @@
 body {
   background-color: var(--background-color-paper);
   color: rgb(var(--foreground-secondary-rgb));
-
+  
   font-family: "Lexend Deca", sans-serif;
 }
 
