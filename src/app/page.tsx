@@ -30,86 +30,71 @@ const Home = () => {
 
   const images: Card[] = [
     {
-      id: 12,
-      content: <p>Image 1 Content</p>,
-      className: "row-span-3",
-      thumbnail: "/designprototype.jpg",
-      name: "Test",
-      link: "/ourwork#meskel-square",
-    },
-    {
       id: 1,
       content: <p>Image 1 Content</p>,
-      className: "row-span-3",
+      className: "md:row-span-3",
       thumbnail: "/designprototype.jpg",
-      name: "Test",
-      link: "/ourwork#meskel-square",
+      name: "Colorex",
+      link: "/ourprojects/0",
     },
     {
       id: 2,
       content: <p>Image 2 Content</p>,
-      className: "row-span-2",
+      className: "md:row-span-2",
       thumbnail: "/designbuilding.jpg",
-      name: "Test",
-      link: "/ourwork#Green-Ladder",
+      name: "The Green Tower",
+      link: "/ourprojects/1",
     },
     {
       id: 7,
       content: <p>Image 7 Content</p>,
-      className: "row-span-3",
-      thumbnail: "/Hillhousefront.jpg",
-      name: "Test",
-      link: "/ourwork#hill-house",
+      className: "md:row-span-3",
+      thumbnail: "/design4.jpg",
+      name: "Green Ladder",
+      link: "/ourprojects/2",
     },
     {
       id: 3,
       content: <p>Image 3 Content</p>,
-      className: "row-span-3 object-bottom",
-      thumbnail: "/meskelSquare2.jpg",
-      name: "Test",
-      link: "/ourwork#meskel-square",
+      className: "md:row-span-3 object-bottom",
+      thumbnail: "/Hillhouse2.jpg",
+      name: "Hill House",
+      link: "/ourprojects/3",
     },
     {
       id: 8,
       content: <p>Image 8 Content</p>,
-      className: "row-span-2",
+      className: "md:row-span-2",
       thumbnail: "/Greentowerinterior.jpg",
-      name: "Test",
-      link: "/ourwork#green-tower-in",
+      name: "The Green Tower - Interior",
+      link: "/ourprojects/4",
     },
     {
       id: 10,
       content: <p>Image 10 Content</p>,
-      className: "row-span-2",
+      className: "md:row-span-2",
       thumbnail: "/Hillhouse.jpg",
       name: "Test",
-      link: "/ourwork#hill-house-int",
+      link: "/ourprojects/5",
     },
     {
       id: 13,
       content: <p>Image 13 Content</p>,
-      className: "row-span-3 object-bottom",
+      className: "md:row-span-3  md:col-span-2 object-bottom",
       thumbnail: "/meskelSquarecrop.jpg",
-      name: "Test",
-      link: "/ourwork#meskel-square",
-    },
-    {
-      id: 9,
-      content: <p>Image 9 Content</p>,
-      className: "row-span-2 row-span-3",
-      thumbnail: "/design4.jpg",
-      name: "Test",
-      link: "/ourwork#Green-Ladder",
+      name: "MCH: Mini Plaza",
+      link: "/ourprojects/6",
     },
     {
       id: 11,
       content: <p>Image 11 Content</p>,
-      className: "row-span-2 row-span-3",
-      thumbnail: "/Hillhouse2.jpg",
-      name: "Test",
-      link: "/ourwork#Hill House",
+      className: "md:row-span-3",
+      thumbnail: "/meskelProject1.jpg",
+      name: "MCH: Hidden spaces ",
+      link: "/ourprojects/7",
     },
   ];
+
   const imageUrls = images.map((image) => image.thumbnail);
   const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -122,11 +107,32 @@ const Home = () => {
   }, []);
 
   return (
-    <main
-      className={`${lexendDeca.className} min-w-full flex flex-col h-[70rem]`}
-    >
-      <ParallaxScroll images={imageUrls} className="custom-scroll mt-36" />
-    </main>
+    // <main
+    //   className={`${lexendDeca.className} min-w-full flex flex-col h-[70rem]`}
+    // >
+    //   <Header />
+
+    //   <div className="mt-52 h-full">
+    //     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-0 h-full">
+    //       {images.map((image) => (
+    //         <Link
+    //           href={image.link}
+    //           passHref
+    //           key={image.id}
+    //           className={`${image.className} flex justify-center items-center image`}
+    //         >
+    //           <img
+    //             src={image.thumbnail}
+    //             alt={image.name}
+    //             className="w-full h-full object-cover grayscale hover:grayscale-0"
+    //           />
+    //         </Link>
+    //       ))}
+    //     </div>
+    //   </div>
+    //   <Footer />
+    /* <ParallaxScroll images={imageUrls} className="custom-scroll mt-36" /> */
+    /* </main> */
 
     // <Header />
     //
@@ -149,6 +155,35 @@ const Home = () => {
     //   </div>
     // </div>
     // <Footer />
+
+    <main className={`${lexendDeca.className} min-w-full flex flex-col h-full`}>
+      <Header />
+      <div className="mt-52 h-full">
+        <div className="grid grid-cols-1 sm:grid-cols-3  lg:grid-cols-3 gap-0 h-full">
+          {images.map((image) => (
+            <Link
+              href={image.link}
+              passHref
+              key={image.id}
+              className={`${image.className} flex justify-center items-center image`} // Add the 'image' class to the div
+              aria-label={image.name}
+            >
+              <div className="relative w-full h-full group">
+                <img
+                  src={image.thumbnail}
+                  alt={image.name}
+                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+                />
+                <div className="absolute bottom-0 right-0 w-full bg-opacity-50 text-white px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {image.name}
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+      <Footer />
+    </main>
   );
 };
 
