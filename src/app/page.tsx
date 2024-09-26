@@ -31,39 +31,39 @@ const Home = () => {
   const images: Card[] = [
     {
       id: 1,
-      content: <p>Image 1 Content</p>,
-      className: "md:row-span-3",
-      thumbnail: "/designprototype.jpg",
-      name: "Colorex",
+      content: <p>Green Tower</p>,
+      className: "md:row-span-2 ",
+      thumbnail: "/GreenTowerfulltall.jpg",
+      name: "Green Tower",
       link: "/ourprojects/0",
     },
     {
       id: 2,
-      content: <p>Image 2 Content</p>,
-      className: "md:row-span-2",
-      thumbnail: "/designbuilding.jpg",
-      name: "The Green Tower",
+      content: <p>Colorex</p>,
+      className: "md:row-span-1",
+      thumbnail: "/Colorex.jpg",
+      name: "Colorex",
       link: "/ourprojects/1",
     },
     {
       id: 7,
-      content: <p>Image 7 Content</p>,
+      content: <p>Green Ladder</p>,
       className: "md:row-span-3",
-      thumbnail: "/design4.jpg",
+      thumbnail: "/GreenLadder.jpg",
       name: "Green Ladder",
       link: "/ourprojects/2",
     },
     {
       id: 3,
-      content: <p>Image 3 Content</p>,
-      className: "md:row-span-3 object-bottom",
+      content: <p>Hill House</p>,
+      className: "md:row-span-1 object-bottom",
       thumbnail: "/Hillhouse2.jpg",
       name: "Hill House",
       link: "/ourprojects/3",
     },
     {
       id: 8,
-      content: <p>Image 8 Content</p>,
+      content: <p>The Green Tower - Interior</p>,
       className: "md:row-span-2",
       thumbnail: "/Greentowerinterior.jpg",
       name: "The Green Tower - Interior",
@@ -71,10 +71,10 @@ const Home = () => {
     },
     {
       id: 10,
-      content: <p>Image 10 Content</p>,
+      content: <p>Hill House Interior</p>,
       className: "md:row-span-2",
       thumbnail: "/Hillhouse.jpg",
-      name: "Test",
+      name: "Hill House Interior",
       link: "/ourprojects/5",
     },
     {
@@ -82,7 +82,7 @@ const Home = () => {
       content: <p>Image 13 Content</p>,
       className: "md:row-span-3  md:col-span-2 object-bottom",
       thumbnail: "/meskelSquarecrop.jpg",
-      name: "MCH: Mini Plaza",
+      name: "Meskel Square",
       link: "/ourprojects/6",
     },
     {
@@ -90,7 +90,7 @@ const Home = () => {
       content: <p>Image 11 Content</p>,
       className: "md:row-span-3",
       thumbnail: "/meskelProject1.jpg",
-      name: "MCH: Hidden spaces ",
+      name: "Meskel Square to City Hall",
       link: "/ourprojects/7",
     },
   ];
@@ -156,23 +156,23 @@ const Home = () => {
     // </div>
     // <Footer />
 
-    <main className={`${lexendDeca.className} min-w-full flex flex-col h-full`}>
+    <main className={`${lexendDeca.className} w-full flex flex-col `}>
       <Header />
-      <div className="mt-52 h-full">
-        <div className="grid grid-cols-1 sm:grid-cols-3  lg:grid-cols-3 gap-0 h-full">
+      <div className="mt-52 ">
+        <div className="grid grid-cols-1 sm:grid-cols-3  lg:grid-cols-3 gap-0 ">
           {images.map((image) => (
             <Link
               href={image.link}
               passHref
               key={image.id}
-              className={`${image.className} flex justify-center items-center image`} // Add the 'image' class to the div
+              className={`${image.className}  items-end`} // Add the 'image' class to the div
               aria-label={image.name}
             >
               <div className="relative w-full h-full group">
                 <img
                   src={image.thumbnail}
                   alt={image.name}
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300  aspect-auto"
                 />
                 <div className="absolute bottom-0 right-0 w-full bg-opacity-50 text-white px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   {image.name}
