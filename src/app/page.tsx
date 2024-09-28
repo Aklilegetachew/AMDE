@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { gsap } from "gsap";
 import Header from "./Component/Header";
 import Footer from "./Component/Footer";
+import {GridImageViewer} from "./Component/GridImageViewer";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
 import { ParallaxScroll } from "./Component/ui/parallax-scroll";
@@ -158,7 +159,7 @@ const Home = () => {
 
     <main className={`${lexendDeca.className} w-full flex flex-col `}>
       <Header />
-      <div className="mt-52 ">
+      {/* <div className="mt-52 ">
         <div className="grid grid-cols-1 sm:grid-cols-3  lg:grid-cols-3 gap-0 ">
           {images.map((image) => (
             <Link
@@ -181,7 +182,9 @@ const Home = () => {
             </Link>
           ))}
         </div>
-      </div>
+      </div> */}
+
+      <GridImageViewer />
       <Footer />
     </main>
   );

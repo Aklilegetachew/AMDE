@@ -173,18 +173,26 @@ const AnimatedMenu: React.FC = () => {
               </li>
             </div>
             <li className="font-lexend-deca text-[#727272] text-4xl sm-below:text-xl font-medium leading-[65px] text-left hover:text-[#F5F5F5]">
-              <Link href="/ourwork" passHref>
+              <Link href="/Commercial" passHref>
                 <div className="flex flex-col  justify-center items-center lg:justify-start lg:items-start border-y border-[#727272] ">
-                  <span>OUR WORKS</span>
-                  <span>ስራዎቻችን</span>
+                  <span>COMMERCIAL</span>
+                  <span>የህዝብ</span>
                 </div>
               </Link>
             </li>
             <li className="font-lexend-deca text-[#727272] text-4xl sm-below:text-xl font-medium leading-[65px] text-left hover:text-[#F5F5F5]">
-              <Link href="/ourServices" passHref>
+              <Link href="/Residential" passHref>
                 <div className="flex flex-col  justify-center items-center lg:justify-start lg:items-start border-y border-[#727272] ">
-                  <span>Services</span>
-                  <span>አገልግሎታችን</span>
+                  <span>RESIDENTIAL</span>
+                  <span>የመኖሪያ ቦታ</span>
+                </div>
+              </Link>
+            </li>
+            <li className="font-lexend-deca text-[#727272] text-4xl sm-below:text-xl font-medium leading-[65px] text-left hover:text-[#F5F5F5]">
+              <Link href="/Community" passHref>
+                <div className="flex flex-col  justify-center items-center lg:justify-start lg:items-start border-y border-[#727272] ">
+                  <span>Community</span>
+                  <span>ማህበረሰብ (አቀፍ)</span>
                 </div>
               </Link>
             </li>
