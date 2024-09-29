@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { gsap } from "gsap";
 import Header from "./Component/Header";
 import Footer from "./Component/Footer";
-import {GridImageViewer} from "./Component/GridImageViewer";
+import { GridImageViewer } from "./Component/GridImageViewer";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
 import { ParallaxScroll } from "./Component/ui/parallax-scroll";
@@ -90,7 +90,7 @@ const Home = () => {
       id: 11,
       content: <p>Image 11 Content</p>,
       className: "md:row-span-3",
-      thumbnail: "/meskelProject1.jpg",
+      thumbnail: "/",
       name: "Meskel Square to City Hall",
       link: "/ourprojects/7",
     },

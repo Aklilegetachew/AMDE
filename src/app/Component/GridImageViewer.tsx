@@ -72,7 +72,7 @@ export const GridImageViewer = () => {
       id: 11,
       content: <p>Image 11 Content</p>,
       className: "md:row-span-3",
-      thumbnail: "/meskelProject1.jpg",
+      thumbnail: "/meskelCityhall.jpg",
       name: "Meskel Square to City Hall",
       link: "/ourprojects/7",
     },
@@ -182,7 +182,6 @@ export const GridImageViewer = () => {
           </div>
         </Link>
 
-        
         <Link
           href={"/ourprojects/6"}
           passHref
@@ -206,7 +205,7 @@ export const GridImageViewer = () => {
             className="flex-1 relative w-full h-full group"
           >
             <img
-              src="/meskelProject1.jpg"
+              src="/meskelCityhall.jpg"
               alt="Image 7"
               className="h-full w-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300  aspect-auto"
             />

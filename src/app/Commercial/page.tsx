@@ -22,7 +22,7 @@ const Commercial = () => {
     },
     {
       id: 7,
-      src: "/meskelProject1.jpg",
+      src: "/meskelCityhall.jpg",
       alt: "MCH: Hidden spaces",
       title: "MCH: Hidden spaces",
       location: "/ourprojects/7",
