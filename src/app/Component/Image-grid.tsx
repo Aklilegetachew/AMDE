@@ -18,12 +18,8 @@ export default function ImageGrid({ images }: ImageGridProps) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 mt-52 mb-24">
       {images.map((image) => (
-        <PageTransition>
-          <Link
-            key={image.id}
-            href={`/ourprojects/${image.id}`}
-            className="group block mb-20"
-          >
+        <PageTransition key={image.id}>
+          <Link href={`/ourprojects/${image.id}`} className="group block mb-20">
             <div className="relative cursor-pointer overflow-hidden">
               <Image
                 src={image.src}

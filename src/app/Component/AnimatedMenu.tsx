@@ -140,7 +140,7 @@ const AnimatedMenu: React.FC = () => {
                             hoveredIndex === null || hoveredIndex === index
                               ? "text-[#606060]"
                               : "text-gray-400"
-                          } text-2xl font-bold md:text-3xl lg:text-lg font-extrabold`}
+                          } text-2xl  md:text-3xl lg:text-lg font-extrabold`}
                         >
                           {item.subtitle}
                         </motion.div>
