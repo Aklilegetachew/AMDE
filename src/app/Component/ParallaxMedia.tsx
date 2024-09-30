@@ -34,9 +34,9 @@ const ParallaxMedia: React.FC<ParallaxMediaProps> = ({ mediaArray }) => {
 
   if (mediaArray.length === 0) return null;
 
-  const firstMedia = mediaArray[0]; 
-  const lastMedia = mediaArray[mediaArray.length - 1]; 
-  const restMedia = mediaArray.slice(1, -1); 
+  const firstMedia = mediaArray[0];
+  const lastMedia = mediaArray[mediaArray.length - 1];
+  const restMedia = mediaArray.slice(1, -1);
 
   const detailIndex = firstMedia.alt;
   let indexofDetail: number;
@@ -76,18 +76,15 @@ const ParallaxMedia: React.FC<ParallaxMediaProps> = ({ mediaArray }) => {
         )}
       </div>
 
-      <div className="relative">
+      <div className="relative h-screen overflow-hidden">
         {restMedia.map((media, index) => (
-          <div
+          <img
             key={index}
-            className="relative w-full h-screen bg-cover bg-no-repeat bg-center"
-            style={{
-              backgroundImage: `url(${media.src})`,
-              backgroundSize: "cover", // or 'contain' if you want to see the whole image
-              backgroundPosition: "center",
-              backgroundAttachment: "fixed",
-            }}
-          ></div>
+            src={media.src}
+            alt={media.alt || "Media image"}
+            className="object-cover w-full h-full"
+            onError={(e) => (e.currentTarget.src = "fallback.jpg")}
+          />
         ))}
       </div>
 
