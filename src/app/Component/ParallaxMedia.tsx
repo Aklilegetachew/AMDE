@@ -76,17 +76,18 @@ const ParallaxMedia: React.FC<ParallaxMediaProps> = ({ mediaArray }) => {
         )}
       </div>
 
-      <div className="relative h-screen overflow-hidden">
-        {restMedia.map((media, index) => (
-          <img
-            key={index}
-            src={media.src}
-            alt={media.alt || "Media image"}
-            className="object-cover w-full h-full"
-            onError={(e) => (e.currentTarget.src = "fallback.jpg")}
-          />
+      {restMedia.length > 0 && // Check if restMedia has elements
+        restMedia.map((media, index) => (
+          <div key={index} className="relative h-screen overflow-hidden">
+            <img
+              
+              src={media.src}
+              alt={media.alt || "Media image"}
+              className="object-cover w-full h-full"
+              onError={(e) => (e.currentTarget.src = "fallback.jpg")}
+            />
+          </div>
         ))}
-      </div>
 
       {/* Last Media - Text content that scrolls to half screen height */}
       <div className="relative w-full h-[50vh] flex   bg-white ">
