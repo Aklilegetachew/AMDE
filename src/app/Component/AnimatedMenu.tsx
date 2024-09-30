@@ -5,14 +5,14 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import HamburgerMenu from "../../../public/ham-thin1.svg";
 import X from "../../../public/x.svg";
-import closeIcon from "../../../public/icons8-close.svg"
+import closeIcon from "../../../public/icons8-close.svg";
 
 const menuItems = [
   { title: "WE ARE AMDE", subtitle: "አምድ ነን", href: "/aboutus" },
   { title: "COMMERCIAL", subtitle: "የህዝብ", href: "/Commercial" },
   { title: "RESIDENTIAL", subtitle: "የመኖሪያ ቦታ", href: "/Residential" },
-  { title: "Community", subtitle: "ማህበረሰብ (አቀፍ)", href: "/Community" },
-  { title: "GET IN TOUCH", subtitle: "በዚህ ያግኙን", href: "#" },
+  { title: "COMMUNITY", subtitle: "ማህበረሰብ (አቀፍ)", href: "/Community" },
+  { title: "CONTACT", subtitle: "አግኙን", href: "/GetInTouch" },
 ];
 
 const AnimatedMenu: React.FC = () => {
@@ -78,11 +78,7 @@ const AnimatedMenu: React.FC = () => {
                   className="flex items-center"
                   aria-label="Close menu"
                 >
-                   <img
-                      src="/closePng.png.png"
-                      alt="Logo"
-                      className="w-6 h-6"
-                    />
+                  <img src="/closePng.png.png" alt="Logo" className="w-6 h-6" />
                   {/* <closeIcon className="" /> */}
                 </button>
                 <Link href="/" passHref>
@@ -123,27 +119,31 @@ const AnimatedMenu: React.FC = () => {
                       onMouseLeave={() => setHoveredIndex(null)}
                     >
                       <Link href={item.href}>
-                      <motion.div
-                        className={`${
-                          hoveredIndex === null || hoveredIndex === index
-                            ? "text-black"
-                            : "text-gray-300"
-                        } text-2xl md:text-4xl lg:text-5xl font-bold`}
-                        whileHover={{ scale: 1.05 }}
-                        transition={{ type: "spring", stiffness: 300 }}
-                      >
-                        {item.title}
-                      </motion.div>
-                      <motion.div
-                        className={`${
-                          hoveredIndex === null || hoveredIndex === index
-                            ? "text-gray-700"
-                            : "text-gray-400"
-                        } text-2xl font-bold md:text-3xl lg:text-lg`}
-                    
-                      >
-                        {item.subtitle}
-                      </motion.div>
+                        <motion.div
+                          className={`${
+                            hoveredIndex === null || hoveredIndex === index
+                              ? "text-[#606060]"
+                              : "text-gray-300"
+                          } text-2xl md:text-4xl lg:text-5xl font-extrabold`}
+                          whileHover={{ scale: 1.05 }}
+                          transition={{
+                            type: "keyframes",
+                            duration: 1.5,
+                            times: [0, 0.5, 1], // progress times for each frame
+                            ease: "easeInOut",
+                          }}
+                        >
+                          {item.title}
+                        </motion.div>
+                        <motion.div
+                          className={`${
+                            hoveredIndex === null || hoveredIndex === index
+                              ? "text-[#606060]"
+                              : "text-gray-400"
+                          } text-2xl font-bold md:text-3xl lg:text-lg font-extrabold`}
+                        >
+                          {item.subtitle}
+                        </motion.div>
                       </Link>
                     </motion.div>
                   ))}

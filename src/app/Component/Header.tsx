@@ -20,7 +20,9 @@ const Header: React.FC = () => {
                 alt="Logo"
                 className="w-12 h-auto  md:w-16 lg:w-20 xl:w-22 object-contain"
               /> */}
-              <p className="font-medium text-2xl md:text-4xl md:font-medium lg:text-5xl">AMDE</p>
+              <p className="font-medium text-2xl md:text-4xl md:font-medium lg:text-5xl text-[#606060]">
+                AMDE
+              </p>
             </div>
           </Link>
         </div>
