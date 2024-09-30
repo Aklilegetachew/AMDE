@@ -122,6 +122,7 @@ const AnimatedMenu: React.FC = () => {
                       onMouseEnter={() => setHoveredIndex(index)}
                       onMouseLeave={() => setHoveredIndex(null)}
                     >
+                      <Link href={item.href}>
                       <motion.div
                         className={`${
                           hoveredIndex === null || hoveredIndex === index
@@ -143,6 +144,7 @@ const AnimatedMenu: React.FC = () => {
                       >
                         {item.subtitle}
                       </motion.div>
+                      </Link>
                     </motion.div>
                   ))}
                 </nav>
