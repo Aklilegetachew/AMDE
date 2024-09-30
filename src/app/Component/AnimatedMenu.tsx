@@ -1,117 +1,54 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import gsap from "gsap";
-// import HamburgerMenu from "../../../public/hamburger-menu.svg";
-import HamburgerMenu from "../../../public/ham-thin1.svg";
-// import HamburgerMenu from "../../../public/ham-tin.svg";
-import BackgroundOverlay from "../../../public/backgroudoverlay.svg";
-import Socials from "./Socials";
-import Logo from "../../../public/logo-gray.svg";
-import X from "../../../public/x.svg";
-import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import HamburgerMenu from "../../../public/ham-thin1.svg";
+import X from "../../../public/x.svg";
+import closeIcon from "../../../public/icons8-close.svg"
+
+const menuItems = [
+  { title: "WE ARE AMDE", subtitle: "አምድ ነን", href: "/aboutus" },
+  { title: "COMMERCIAL", subtitle: "የህዝብ", href: "/Commercial" },
+  { title: "RESIDENTIAL", subtitle: "የመኖሪያ ቦታ", href: "/Residential" },
+  { title: "Community", subtitle: "ማህበረሰብ (አቀፍ)", href: "/Community" },
+  { title: "GET IN TOUCH", subtitle: "በዚህ ያግኙን", href: "#" },
+];
 
 const AnimatedMenu: React.FC = () => {
-  const menuRef = useRef<HTMLDivElement | null>(null);
-  const listRef = useRef<HTMLDivElement | null>(null);
   const [isOpen, setIsOpen] = useState(false);
-
-  useEffect(() => {
-    // Function to apply responsive font sizes based on screen width
-    const applyResponsiveAnimation = () => {
-      const isSmallScreen = window.innerWidth < 768; // Adjust breakpoint as needed
-      const listItems = document.querySelectorAll("ul li");
-
-      listItems.forEach((item) => {
-        const smallScreenFontSize = "1.5em";
-        const smallScreenHoverFontSize = "2em";
-        const largeScreenFontSize = "3em";
-        const largeScreenHoverFontSize = "3.5em";
-
-        gsap.fromTo(
-          item,
-          {
-            fontSize: isSmallScreen ? smallScreenFontSize : largeScreenFontSize,
-            fontWeight: "400",
-          },
-          {
-            fontSize: isSmallScreen
-              ? smallScreenHoverFontSize
-              : largeScreenHoverFontSize,
-            fontWeight: "bold",
-            ease: "power3.out",
-            duration: 0.4,
-            paused: true,
-            reversed: true,
-          }
-        );
-
-        // Handle hover state
-        item.addEventListener("mouseenter", () => {
-          gsap.to(item, {
-            fontSize: isSmallScreen
-              ? smallScreenHoverFontSize
-              : largeScreenHoverFontSize,
-            fontWeight: "bold",
-            ease: "power3.out",
-            duration: 0.3,
-          });
-        });
-
-        // Handle mouse leave state
-        item.addEventListener("mouseleave", () => {
-          gsap.to(item, {
-            fontSize: isSmallScreen ? smallScreenFontSize : largeScreenFontSize,
-            fontWeight: "400",
-            ease: "power3.in",
-            duration: 0.3,
-          });
-        });
-      });
-    };
-
-    // Apply responsive animation on load
-    applyResponsiveAnimation();
-
-    // Reapply responsive animation on window resize
-    window.addEventListener("resize", applyResponsiveAnimation);
-
-    // Clean up the event listener on component unmount
-    return () => {
-      window.removeEventListener("resize", applyResponsiveAnimation);
-    };
-  }, []);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-    // ${
-    //   isOpen ? "translate-x-0 opacity-100" : ""
-    // }
-    if (menuRef.current) {
-      if (isOpen) {
-        gsap.to(menuRef.current, {
-          duration: 0.5,
-          x: "100%",
-          opacity: 0,
-          ease: "power2.inOut",
-        });
-      } else {
-        gsap.fromTo(
-          menuRef.current,
-          {
-            x: "100%",
-            opacity: 0,
-          },
-          {
-            duration: 0.5,
-            x: "0%",
-            opacity: 1,
-            ease: "power2.inOut",
-          }
-        );
-      }
-    }
+  };
+
+  const menuVariants = {
+    closed: {
+      x: "100%",
+      opacity: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeInOut",
+        staggerChildren: 0.1,
+        staggerDirection: -1,
+      },
+    },
+    open: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeInOut",
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    closed: { opacity: 0, y: 20 },
+    open: { opacity: 1, y: 0 },
   };
 
   return (
@@ -119,102 +56,101 @@ const AnimatedMenu: React.FC = () => {
       <button
         onClick={toggleMenu}
         className="z-51 bg-transparent border-none cursor-pointer text-2xl md:text-3xl lg:text-4xl"
+        aria-label="Toggle menu"
       >
-        {/* {isOpen ? (
-          <img
-            src="/close-thin.svg"
-            alt="Logo"
-            className="bg-white w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 object-contain"
-          />
-        ) : (
-          <span className="bg-red">
-            <HamburgerMenu />
-          </span>
-        )} */}
-
         <span className="bg-red">
           <HamburgerMenu />
         </span>
       </button>
-      <div
-        ref={menuRef}
-        className={`fixed top-0 left-0 w-full h-full secondary-color text-white flex item-center z-50  transform transition-transform duration-500 ease-in-out translate-x-full opacity-0`}
-      >
-        <nav className=" fixed w-full top-8 left-0 px-6 flex justify-between items-center">
-          <button onClick={toggleMenu} className="flex items-center">
-            <img
-              src="/close-thin.svg"
-              alt="Logo"
-              className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 object-contain"
-            />
-          </button>
-
-          <Link href="/" passHref>
-            <div className="flex items-center ">
-              <img
-                src="/logo-gray.svg"
-                alt="Logo"
-                className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 object-contain"
-              />
-            </div>
-          </Link>
-        </nav>
-        <div className="w-full md:flex p-10 sm-below:px-4 sm-below:justify-between sm-below: justify-between sm:p-24 ">
-          <ul className="list-none mt-20 flex flex-col w-full flex-grow flex-shrink-0 lg:w-2/3 sm-below:h-[70%] lg:mb-14 lg:mt-5">
-            <div ref={listRef}>
-              {" "}
-              <li className="font-lexend-deca text-[#727272] text-4xl sm-below:text-3xl font-bold sm-below:leading-10 leading-[65px] text-left  hover:text-[#F5F5F5]">
-                <Link href="/aboutus" passHref>
-                  <div className="flex flex-col justify-center items-center lg:justify-start lg:items-start border-y border-[#727272] ">
-                    <span>WE ARE AMDE</span>
-                    <span>አምድ ነን</span>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial="closed"
+            animate="open"
+            exit="closed"
+            variants={menuVariants}
+            className="fixed top-0 left-0 w-full h-full bg-white text-white flex items-center z-50"
+          >
+            <div className="min-h-screen w-full bg-white text-black flex flex-col">
+              <header className="flex justify-between items-center px-8 py-8">
+                <button
+                  onClick={toggleMenu}
+                  className="flex items-center"
+                  aria-label="Close menu"
+                >
+                   <img
+                      src="/closePng.png.png"
+                      alt="Logo"
+                      className="w-6 h-6"
+                    />
+                  {/* <closeIcon className="" /> */}
+                </button>
+                <Link href="/" passHref>
+                  <div className="flex items-center">
+                    <img
+                      src="/logo.svg"
+                      alt="Logo"
+                      className="w-6 h-6 text-black sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 object-contain"
+                    />
                   </div>
                 </Link>
-              </li>
+              </header>
+              <main className="flex-grow flex flex-col md:flex-row">
+                <motion.div
+                  variants={itemVariants}
+                  className="w-full md:w-1/4 p-4 space-y-2 md:space-y-4"
+                >
+                  <Link
+                    href="#"
+                    className="block text-gray-500 hover:text-black text-sm md:text-base"
+                  >
+                    Instagram
+                  </Link>
+                  <Link
+                    href="#"
+                    className="block text-gray-500 hover:text-black text-sm md:text-base"
+                  >
+                    LinkedIn
+                  </Link>
+                </motion.div>
+                <nav className="w-full md:w-3/4 p-4 space-y-4">
+                  {menuItems.map((item, index) => (
+                    <motion.div
+                      key={item.title}
+                      variants={itemVariants}
+                      className="menu-item transition-colors duration-300 ease-in-out"
+                      onMouseEnter={() => setHoveredIndex(index)}
+                      onMouseLeave={() => setHoveredIndex(null)}
+                    >
+                      <motion.div
+                        className={`${
+                          hoveredIndex === null || hoveredIndex === index
+                            ? "text-black"
+                            : "text-gray-300"
+                        } text-2xl md:text-4xl lg:text-5xl font-bold`}
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ type: "spring", stiffness: 300 }}
+                      >
+                        {item.title}
+                      </motion.div>
+                      <motion.div
+                        className={`${
+                          hoveredIndex === null || hoveredIndex === index
+                            ? "text-gray-700"
+                            : "text-gray-400"
+                        } text-2xl font-bold md:text-3xl lg:text-lg`}
+                    
+                      >
+                        {item.subtitle}
+                      </motion.div>
+                    </motion.div>
+                  ))}
+                </nav>
+              </main>
             </div>
-            <li className="font-lexend-deca text-[#727272] text-4xl sm-below:text-xl font-medium leading-[65px] text-left hover:text-[#F5F5F5]">
-              <Link href="/Commercial" passHref>
-                <div className="flex flex-col  justify-center items-center lg:justify-start lg:items-start border-y border-[#727272] ">
-                  <span>COMMERCIAL</span>
-                  <span>የህዝብ</span>
-                </div>
-              </Link>
-            </li>
-            <li className="font-lexend-deca text-[#727272] text-4xl sm-below:text-xl font-medium leading-[65px] text-left hover:text-[#F5F5F5]">
-              <Link href="/Residential" passHref>
-                <div className="flex flex-col  justify-center items-center lg:justify-start lg:items-start border-y border-[#727272] ">
-                  <span>RESIDENTIAL</span>
-                  <span>የመኖሪያ ቦታ</span>
-                </div>
-              </Link>
-            </li>
-            <li className="font-lexend-deca text-[#727272] text-4xl sm-below:text-xl font-medium leading-[65px] text-left hover:text-[#F5F5F5]">
-              <Link href="/Community" passHref>
-                <div className="flex flex-col  justify-center items-center lg:justify-start lg:items-start border-y border-[#727272] ">
-                  <span>Community</span>
-                  <span>ማህበረሰብ (አቀፍ)</span>
-                </div>
-              </Link>
-            </li>
-            <li className="font-lexend-deca text-[#727272] text-4xl sm-below:text-xl font-medium leading-[65px] text-left hover:text-[#F5F5F5]">
-              <div className="flex flex-col justify-center items-center lg:justify-start lg:items-start border-y border-[#727272] ">
-                <a href="#">GET IN TOUCH</a>
-                <a href="#">በዚህ ያግኙን</a>
-              </div>
-            </li>
-            <hr className="border-[#727272] hover:border-[#F5F5F5]" />
-          </ul>
-          <div className="flex  items-end justify-end lg:w-1/4 sm-below:my-32">
-            <BackgroundOverlay className="z-[-1] absolute top-20 right-0 bg-cover bg-center" />
-            <div className=" pt-6 block sm:hidden">
-              <Socials alignment="row" />
-            </div>
-            <div className=" pt-6 hidden sm:block">
-              <Socials alignment="column" />
-            </div>
-          </div>
-        </div>
-      </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
