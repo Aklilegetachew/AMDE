@@ -3,6 +3,12 @@ import Footer from "../Component/Footer";
 import GetInTouch from "../Component/GetInTouch";
 import Header from "../Component/Header";
 
+import { Lexend_Deca } from "next/font/google";
+
+const lexendDeca = Lexend_Deca({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"], // Optional: specify weights
+});
 const ResedntialPage = () => {
   const images: ImageItem[] = [
     {
@@ -51,7 +57,7 @@ const ResedntialPage = () => {
     },
   ];
   return (
-    <div>
+    <div className={`${lexendDeca.className}`}>
       <Header />
       <ImageGrid images={images} />
       <GetInTouch />

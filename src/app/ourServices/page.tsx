@@ -5,9 +5,15 @@ import GetInTouch from "../Component/GetInTouch";
 import Header from "../Component/Header";
 import PageHeading from "../Component/PageHeading";
 
+import { Lexend_Deca } from "next/font/google";
+
+const lexendDeca = Lexend_Deca({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"], // Optional: specify weights
+});
 const SomePage = () => {
   return (
-    <div>
+    <div className={`${lexendDeca.className}`}>
       <Header />
       <PageHeading amharictitle="አገልግሎታችን" title="Our Services" />
       <ContentTwoByOne

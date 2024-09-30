@@ -10,16 +10,16 @@ const About: React.FC = () => {
           AMDE CONSULTING ARCHITECTS &amp; ENGINEERS
         </h3>
       </div>
-      <section className="container mx-auto px-6 py-16 md:flex md:items-center md:justify-between">
-        <div className="md:w-1/2">
+      <section className="container mx-auto px-6 py-16 lg:flex lg:items-center lg:justify-between">
+        <div className="w-full lg:w-1/2">
           <img
             src="/cardlogo.jpg"
             alt="Architecture Image"
             className="w-full h-auto object-cover"
           />
         </div>
-        <div className="mt-8 md:mt-0 md:w-1/2 md:pl-12">
-          <h2 className=" text-xl md:text-4xl font-bold mb-4">We are AMDE </h2>
+        <div className="mt-8 md:mt-0 w-full lg:w-1/2 lg:pl-12">
+          <h2 className=" text-xl md:text-4xl font-bold mb-4 mt-10 text-center">We are AMDE </h2>
           {/* <h3 className="text-2xl font-semibold mb-4">
             AMDE CONSULTING ARCHITECTS &amp; ENGINEERS
           </h3> */}

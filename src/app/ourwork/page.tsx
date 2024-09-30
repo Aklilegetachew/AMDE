@@ -13,9 +13,15 @@ import ContentSection, {
 } from "../Component/ContentSection";
 import PageTransition from "../Component/ui/PageTransition";
 
+import { Lexend_Deca } from "next/font/google";
+
+const lexendDeca = Lexend_Deca({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"], // Optional: specify weights
+});
 export default function AboutUs() {
   return (
-    <main>
+    <main className={`${lexendDeca.className}`}>
       <Header />
       <PageHeading amharictitle="ስራዎቻችን" title="OUR WORKS" />
       <PageTransition>
