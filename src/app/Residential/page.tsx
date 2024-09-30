@@ -10,7 +10,7 @@ const ResedntialPage = () => {
       src: "/GreenLadder.jpg",
       alt: "Green Ladder",
       title: "Green Ladder",
-      location: "/ourprojects/0",
+      location: "3B+G+16 Apartment Building",
     },
 
     {
@@ -18,28 +18,28 @@ const ResedntialPage = () => {
       src: "/greenladerbetter.png",
       alt: "Green Tower",
       title: "Green Tower",
-      location: "/ourprojects/2",
+      location: "3B+G+15 Apartment Building",
     },
     {
       id: 3,
       src: "/Hillhouse.jpg",
       alt: "Hill House - Interior",
       title: "Hill House - Interior",
-      location: "/ourprojects/3",
+      location: "Open Interiors Bathed in Natural Light",
     },
     {
       id: 4,
       src: "/Hillhouse2.jpg",
       alt: "Hill House",
       title: "Hill House",
-      location: "/ourprojects/4",
+      location: "Yeka Mountain, Addis Ababa",
     },
     {
       id: 5,
       src: "/colorex-3x4.jpg",
       alt: "Colorex",
       title: "Colorex",
-      location: "/ourprojects/5",
+      location: "9-floor apartment building",
     },
 
     {
@@ -47,7 +47,7 @@ const ResedntialPage = () => {
       src: "/Greentowerinterior.jpg",
       alt: "The Green Tower - Interior",
       title: "The Green Tower - Interior",
-      location: "/ourprojects/8",
+      location: "Seamless Vertical Garden",
     },
   ];
   return (

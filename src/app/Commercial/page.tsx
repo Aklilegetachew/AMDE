@@ -10,7 +10,7 @@ const Commercial = () => {
       src: "/meskelSquarecrop.jpg",
       alt: "Meskel Square",
       title: "Meskel Square",
-      location: "/ourprojects/1",
+      location: "3.5 km pedestrian walkway",
     },
 
     {
@@ -18,14 +18,14 @@ const Commercial = () => {
       src: "/miniPlaza.jpg",
       alt: "MCH: Mini Plaza",
       title: "MCH: Mini Plaza",
-      location: "/ourprojects/6",
+      location: "Churchill Avenue, Addis Ababa",
     },
     {
       id: 7,
       src: "/meskelCityhall.jpg",
       alt: "MCH: Hidden spaces",
       title: "MCH: Hidden spaces",
-      location: "/ourprojects/7",
+      location: "Preserving Heritage",
     },
   ];
   return (

@@ -20,10 +20,13 @@ export const mediaCollections: MediaItem[][] = [
   ],
   [
     { type: "image", src: "/Hillhouse.jpg", alt: "4" },
+    { type: "image", src: "/Hillhouseinterior.jpg", alt: "4" },
     { type: "text", src: "/Hillhouse.jpg", alt: "Hill House - interior" },
   ],
   [
     { type: "image", src: "/Hillhouse2.jpg", alt: "3" },
+    { type: "image", src: "/Hillhousefront.jpg", alt: "3" },
+    { type: "image", src: "/Hillhouseside.jpg", alt: "3" },
     { type: "text", src: "/Hillhouse.jpg", alt: "Hill House" },
   ],
   [
@@ -36,10 +39,12 @@ export const mediaCollections: MediaItem[][] = [
   ],
   [
     { type: "image", src: "/meskelCityhall.jpg", alt: "8" },
-    { type: "text", src: "/Hillhouse.jpg", alt: " MCH: Hidden spaces" },
+    { type: "image", src: "/meskelsquareHiddenspace.jpg", alt: "8" },
+    { type: "text", src: "/Hillhouse.jpg", alt: "MCH: Hidden spaces" },
   ],
   [
     { type: "image", src: "/Greentowerinterior.jpg", alt: "2" },
+    { type: "image", src: "/Greentowerinteriorside.jpg", alt: "2" },
     { type: "text", src: "/Hillhouse.jpg", alt: "The Green Tower - Interior" },
   ],
 ];
