@@ -102,7 +102,7 @@ export const GridImageViewer = () => {
           href={"/ourprojects/1"}
           passHref
           key={1}
-          className="bg-red-800 md:col-span-2 relative w-full h-full group"
+          className="bg-black md:col-span-2 relative w-full h-full group"
         >
           <img
             src="/meskelSquarecrop.jpg"
@@ -119,7 +119,7 @@ export const GridImageViewer = () => {
           href={"/ourprojects/2"}
           passHref
           key={1}
-          className="bg-yellow-500 row-span-2 relative w-full h-full group"
+          className="bg-black row-span-2 relative w-full h-full group"
         >
           <img
             src="/greenladerbetter.png"
@@ -136,7 +136,7 @@ export const GridImageViewer = () => {
           href={"/ourprojects/3"}
           passHref
           key={1}
-          className="bg-green-500 relative w-full h-full group"
+          className="bg-black relative w-full h-full group"
         >
           <img
             src="/Hillhouse.jpg"
@@ -153,7 +153,7 @@ export const GridImageViewer = () => {
           href={"/ourprojects/4"}
           passHref
           key={1}
-          className="bg-blue-500 row-span-2 relative w-full h-full group"
+          className="bg-black row-span-2 relative w-full h-full group"
         >
           <img
             src="/Hillhouse2.jpg"
@@ -170,7 +170,7 @@ export const GridImageViewer = () => {
           href={"/ourprojects/5"}
           passHref
           key={1}
-          className="bg-orange-500 relative w-full h-full group"
+          className="bg-black relative w-full h-full group"
         >
           <img
             src="/colorex-3x4.jpg"
@@ -186,7 +186,7 @@ export const GridImageViewer = () => {
           href={"/ourprojects/6"}
           passHref
           key={1}
-          className="bg-black-500 md:col-span-2 relative w-full h-full group"
+          className="bg-black md:col-span-2 relative w-full h-full group"
         >
           <img
             src="/miniPlaza.jpg"
