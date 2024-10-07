@@ -16,7 +16,7 @@ export const GridImageViewer = () => {
       id: 1,
       content: <p>Green Tower</p>,
       className: "md:row-span-2 ",
-      thumbnail: "/GreenTowerfulltall.jpg",
+      thumbnail: "/GreenTowerfulltallCrop.jpg",
       name: "Green Tower",
       link: "/ourprojects/0",
     },
@@ -79,16 +79,16 @@ export const GridImageViewer = () => {
   ];
   return (
     <div className="mt-52 h-full">
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-0 h-full w-full">
+      <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-0 h-full w-full">
         {/* Cell 1 with image, row-span-2 */}
         <Link
           href={"/ourprojects/0"}
           passHref
           key={1}
-          className="bg-black row-span-2 relative w-full h-full group"
+          className="bg-black  relative w-full h-full group"
         >
           <img
-            src="/GreenLadder.jpg"
+            src="/GreenLadderCrop.jpg"
             alt="Image 1"
             className="h-full w-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300  aspect-auto"
           />
@@ -102,14 +102,14 @@ export const GridImageViewer = () => {
           href={"/ourprojects/1"}
           passHref
           key={1}
-          className="bg-black md:col-span-2 relative w-full h-full group"
+          className="bg-black md:col-span-3 relative w-full h-full group"
         >
           <img
-            src="/meskelSquarecrop.jpg"
+            src="/meskelSquareCrop2.jpg"
             alt="Image 2"
             className="h-full w-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300  aspect-auto"
           />
-          <div className="absolute bottom-0 right-0 w-full bg-opacity-50 text-white px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div className="absolute bottom-0 right-0 w-full bg-opacity-50 text-white px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ">
             Meskel Square
           </div>
         </Link>
@@ -119,12 +119,12 @@ export const GridImageViewer = () => {
           href={"/ourprojects/2"}
           passHref
           key={1}
-          className="bg-black row-span-2 relative w-full h-full group"
+          className="bg-black relative w-full h-full group"
         >
           <img
-            src="/greenladerbetter.png"
+            src="/GreenTowerfulltallCrop.jpg"
             alt="Image 3"
-            className="h-full w-full object-cover items-center grayscale group-hover:grayscale-0 transition-all duration-300  aspect-auto"
+            className="h-full w-full object-cover object-right grayscale group-hover:grayscale-0 transition-all duration-300 aspect-auto"
           />
           <div className="absolute bottom-0 right-0 w-full bg-opacity-50 text-white px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             Green Tower
@@ -141,7 +141,7 @@ export const GridImageViewer = () => {
           <img
             src="/Hillhouse.jpg"
             alt="Image 4"
-            className="h-full w-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300  aspect-auto"
+            className="h-full w-full object-cover object-left grayscale group-hover:grayscale-0 transition-all duration-300 aspect-auto"
           />
           <div className="absolute bottom-0 right-0 w-full bg-opacity-50 text-white px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             Hill House - Interior
@@ -153,10 +153,10 @@ export const GridImageViewer = () => {
           href={"/ourprojects/4"}
           passHref
           key={1}
-          className="bg-black row-span-2 relative w-full h-full group"
+          className="bg-black relative w-full h-full group"
         >
           <img
-            src="/Hillhouse2.jpg"
+            src="/Hillhouse2Crop.jpg"
             alt="Image 5"
             className="h-full w-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300  aspect-auto"
           />
@@ -173,7 +173,7 @@ export const GridImageViewer = () => {
           className="bg-black relative w-full h-full group"
         >
           <img
-            src="/colorex-3x4.jpg"
+            src="/colorexCrop1.jpg"
             alt="Image 6"
             className="h-full w-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300  aspect-auto"
           />
@@ -197,7 +197,38 @@ export const GridImageViewer = () => {
             MCH: Mini Plaza
           </div>
         </Link>
-        <div className="bg-black-500 md:col-span-3 flex flex-row">
+
+        <Link
+          href={"/ourprojects/7"}
+          passHref
+          key={1}
+          className="flex-1 relative w-full h-full group"
+        >
+          <img
+            src="/meskelCityhallCrop.jpg"
+            alt="Image 7"
+            className="h-full w-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300  aspect-auto"
+          />
+          <div className="absolute bottom-0 right-0 w-full bg-opacity-50 text-white px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            MCH: Hidden spaces
+          </div>
+        </Link>
+        <Link
+          href={"/ourprojects/8"}
+          passHref
+          key={1}
+          className="flex-1 relative w-full h-full group"
+        >
+          <img
+            src="/GreentowerinteriorCrop.jpg"
+            alt="Image 8"
+            className="h-full w-full object-cover grayscale hover:grayscale-0"
+          />
+          <div className="absolute bottom-0 right-0 w-full bg-opacity-50 text-white px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            The Green Tower - Interior
+          </div>
+        </Link>
+        {/* <div className="bg-black-500 md:col-span-3 flex flex-row">
           <Link
             href={"/ourprojects/7"}
             passHref
@@ -205,7 +236,7 @@ export const GridImageViewer = () => {
             className="flex-1 relative w-full h-full group"
           >
             <img
-              src="/meskelCityhall.jpg"
+              src="/meskelCityhallCrop.jpg"
               alt="Image 7"
               className="h-full w-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300  aspect-auto"
             />
@@ -220,7 +251,7 @@ export const GridImageViewer = () => {
             className="flex-1 relative w-full h-full group"
           >
             <img
-              src="/Greentowerinterior.jpg"
+              src="/GreentowerinteriorCrop.jpg"
               alt="Image 8"
               className="h-full w-full object-cover grayscale hover:grayscale-0"
             />
@@ -228,7 +259,7 @@ export const GridImageViewer = () => {
               The Green Tower - Interior
             </div>
           </Link>
-        </div>
+        </div> */}
       </div>
     </div>
   );

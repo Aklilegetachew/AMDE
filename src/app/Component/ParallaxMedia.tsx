@@ -90,7 +90,7 @@ const ParallaxMedia: React.FC<ParallaxMediaProps> = ({ mediaArray }) => {
         ))}
 
       {/* Last Media - Text content that scrolls to half screen height */}
-      <div className="relative w-full h-[50vh] flex   bg-white ">
+      <div className="relative w-full h-[60vh] flex   bg-white ">
         {/* <h1 className="text-4xl font-bold">{lastMedia.alt}</h1> */}
         <ProjectDetails
           projectCode={projectCode}

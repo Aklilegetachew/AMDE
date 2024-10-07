@@ -10,21 +10,21 @@ interface ProjectDetailsProps {
 }
 
 export default function ProjectDetails({
-  projectCode = "D72",
-  location = "Tamaki Makaurau",
-  description = "A mixed use conversion uses a woven aluminium façade to filter New Zealand's bright sunlight. 5400m² of commercial space around a spiral shaped central courtyard.",
-  area = "5400m²",
-  completionYear = "1996",
-  awards = ["BOMA Award for Building Excellence, 1996"],
+  projectCode,
+  location,
+  description,
+  area,
+  completionYear,
+  awards,
 }: ProjectDetailsProps) {
   return (
     <div className="max-w-4xl mx-auto p-6 font-sans">
       <h1 className="text-4xl font-bold mb-4">{projectCode}</h1>
       <h2 className="text-2xl text-gray-500 mb-12">{location}</h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-        <div className="col-span-2">
-          <p className="text-lg">{description}</p>
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-14">
+        <div className="col-span-3">
+          <p className="text-xl">{description}</p>
         </div>
         <div>
           <h3 className="text-xl font-semibold mb-2">Status</h3>

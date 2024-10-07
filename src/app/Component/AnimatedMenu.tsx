@@ -9,7 +9,7 @@ import closeIcon from "../../../public/icons8-close.svg";
 
 const menuItems = [
   { title: "WE ARE AMDE", subtitle: "አምድ ነን", href: "/aboutus" },
-  { title: "COMMERCIAL", subtitle: "የህዝብ", href: "/Commercial" },
+  { title: "PUBLIC", subtitle: "የህዝብ አገልግሎት", href: "/Commercial" },
   { title: "RESIDENTIAL", subtitle: "የመኖሪያ ቦታ", href: "/Residential" },
   { title: "COMMUNITY", subtitle: "ማህበረሰብ (አቀፍ)", href: "/Community" },
   { title: "CONTACT", subtitle: "አግኙን", href: "/GetInTouch" },
@@ -124,26 +124,35 @@ const AnimatedMenu: React.FC = () => {
                             hoveredIndex === null || hoveredIndex === index
                               ? "text-[#606060]"
                               : "text-gray-300"
-                          } text-2xl md:text-4xl lg:text-5xl font-extrabold`}
+                          }`}
                           whileHover={{ scale: 1.05 }}
                           transition={{
-                            type: "keyframes",
-                            duration: 1.5,
-                            times: [0, 0.5, 1], // progress times for each frame
-                            ease: "easeInOut",
+                            // type: "keyframes",
+                            // duration: 1.5,
+                            // times: [0, 0.5, 1],
+                            // ease: "linear",
+                            type: "spring",
+                            stiffness: 120,
+                            damping: 15,
                           }}
                         >
-                          {item.title}
+                          {/* Title */}
+                          <div className="text-2xl md:text-4xl lg:text-5xl font-extrabold">
+                            {item.title}
+                          </div>
+
+                          {/* Subtitle with a different default color */}
+                          <div
+                            className={`${
+                              hoveredIndex === null || hoveredIndex === index
+                                ? "text-[#9c9494]"
+                                : "text-gray-300"
+                            } text-2xl md:text-4xl lg:text-5xl font-extrabold`}
+                          >
+                            {item.subtitle}
+                          </div>
                         </motion.div>
-                        <motion.div
-                          className={`${
-                            hoveredIndex === null || hoveredIndex === index
-                              ? "text-[#606060]"
-                              : "text-gray-400"
-                          } text-2xl  md:text-3xl lg:text-lg font-extrabold`}
-                        >
-                          {item.subtitle}
-                        </motion.div>
+                        <hr />
                       </Link>
                     </motion.div>
                   ))}

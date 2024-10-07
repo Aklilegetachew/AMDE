@@ -16,8 +16,8 @@ const SomePage = () => {
   return (
     <div className={`${lexendDeca.className}`}>
       <Header />
-      <PageHeading amharictitle="ማህበረሰብ (አቀፍ)" title="Community" />
-      <ComunityUI
+      {/* <PageHeading amharictitle="ማህበረሰብ (አቀፍ)" title="Community" /> */}
+      {/* <ComunityUI
         title="Empowering Communities"
         paragraph="AMDE is a strong advocate of fulfilling social responsibility in its area of expertise. To do that, we venture with partners with like mind and interest to foster public projects that would create social, economic and environmental impact through strong collaborative grounds. With the community at the center of the whole process, AMDE and the participating partners embark on this task for the creation of better living environment.    "
         imageSrc="/HandShake.png"
@@ -32,7 +32,36 @@ const SomePage = () => {
         imageAlt="Description of Image 1"
         imageSide="left" // Image on the right
         serviceImg="/tree.png"
-      />
+      /> */}
+      
+      
+      <div className="container w-full grid grid-row-1 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-6 py-16 mx-auto">
+        <div className=" lg:col-span-2">
+          <div className="text-center pt-28">
+            <h2 className="text-4xl font-bold mb-4 mt-10">Community</h2>
+          </div>
+          <p className="text-gray-700 leading-relaxed">
+            AMDE is a strong advocate of fulfilling social responsibility in its
+            area of expertise. To do that, we venture with partners with like
+            mind and interest to foster public projects that would create
+            social, economic and environmental impact through strong
+            collaborative grounds. With the community at the center of the whole
+            process, AMDE and the participating partners embark on this task for
+            the creation of better living environment.
+          </p>
+        </div>
+        <div className=" lg:col-span-2">
+          <div className="text-center pt-28">
+            <h2 className="text-4xl font-bold mb-4 mt-10">ማህበረሰብ (አቀፍ)</h2>
+          </div>
+          <p className="text-gray-700 leading-relaxed">
+            አምድ በሙያችን መስክ ማህበራዊ ሃላፊነትን መወጣት አለብን ብሎ የሚያምን ጠንካራ ተሟጋች ነው። ለዚህም፣
+            ተመሳሳይ አስተሳሰብ እና ፍላጎት ካላቸው አጋሮች ጋር ማህበራዊ፣ ኢኮኖሚያዊ እና አካባቢያዊ ተፅእኖ የሚፈጥሩ
+            ህዝባዊ ፕሮጀክቶችን እውን ለማድረግ በጠንካራ ትብብር እንሰራለን። ማህበረሰቡን ዋነኛ የሂደቱ ተዋናኝ
+            በማድረግ አምድ እና ተሳታፊ አጋሮች የተሻለ የመኖሪያ አከባቢን ለመፍጠር ይጥራሉ።
+          </p>
+        </div>
+      </div>
       <div className="flex flex-col p-2 justify-center items-center md:col-span-2 ">
         <p className=" w-full text-base font-bold leading-[22.5px] paragcolor text-center">
           Detail version is coming soon!

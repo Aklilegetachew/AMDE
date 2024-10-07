@@ -2,7 +2,8 @@ import React from "react";
 
 const GetInTouch = () => {
   return (
-    <div className="bg-[#DEDFDF] w-full mt-6  py-16 bg-[url('/backgroundDesign.png')] bg-cover bg-center flex items-center justify-center">
+    // bg-[url('/backgroundDesign.png')]
+    <div className="bg-[#DEDFDF] w-full mt-6  py-16  bg-cover bg-center flex items-center justify-center">
       <div className="container mx-auto text-center px-4">
         <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>
         <hr className="w-12 mx-auto mb-4 border-2 border-black" />

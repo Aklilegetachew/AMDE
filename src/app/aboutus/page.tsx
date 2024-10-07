@@ -16,11 +16,13 @@ export default function AboutUs() {
   return (
     <main className={`${lexendDeca.className}`}>
       <Header />
-      <PageHeading amharictitle="ስለ እኛ" title="WHO WE ARE" />
+      {/* <PageHeading amharictitle="ስለ እኛ" title="WHO WE ARE" /> */}
       <About />
       <Divider />
       <Founders />
+      {/* <PageHeading amharictitle="" title="" /> */}
       <GetInTouch />
+
       <Footer />
     </main>
   );
