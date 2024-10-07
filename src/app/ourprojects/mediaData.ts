@@ -30,7 +30,7 @@ export const mediaCollections: MediaItem[][] = [
     { type: "text", src: "/Hillhouse.jpg", alt: "Hill House" },
   ],
   [
-    { type: "image", src: "/colorex-3x4.jpg", alt: "5" },
+    { type: "image", src: "/colorexSmall.png", alt: "5" },
     { type: "text", src: "/Hillhouse.jpg", alt: "Colorx" },
   ],
   [

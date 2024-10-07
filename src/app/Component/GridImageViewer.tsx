@@ -78,7 +78,7 @@ export const GridImageViewer = () => {
     },
   ];
   return (
-    <div className="mt-52 h-full">
+    <div className="mt-52 md:mt-96 lg:mt-52 h-full">
       <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-0 h-full w-full">
         {/* Cell 1 with image, row-span-2 */}
         <Link
