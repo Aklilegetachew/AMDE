@@ -63,7 +63,7 @@ const ParallaxMedia: React.FC<ParallaxMediaProps> = ({ mediaArray }) => {
             onError={(e) => (e.currentTarget.src = "fallback.jpg")}
           />
         ) : (
-          <div className="md:mt-28 h-full w-full overflow-hidden">
+          <div className="md:my-28 h-[85%] w-full overflow-hidden">
             <iframe
               src={`https://player.vimeo.com/video/${firstMedia.src}?autoplay=1&muted=1&loop=1&controls=0`}
               className=" w-full h-full object-fill"

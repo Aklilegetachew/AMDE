@@ -16,11 +16,10 @@ export const mediaCollections: MediaItem[][] = [
   ],
   [
     { type: "video", src: "1011250451", alt: "1" },
-    { type: "image", src: "/greenladerbetter.png", alt: "1" },
+    // { type: "image", src: "/greenladerbetter.png", alt: "1" },
     { type: "text", src: "/Hillhouse.jpg", alt: "Green Tower" },
   ],
   [
-    { type: "video", src: "1011248268", alt: "4" },
     { type: "image", src: "/Hillhouse.jpg", alt: "4" },
     { type: "image", src: "/Hillhouseinterior.jpg", alt: "4" },
     { type: "text", src: "/Hillhouse.jpg", alt: "Hill House - interior" },
@@ -45,13 +44,12 @@ export const mediaCollections: MediaItem[][] = [
     { type: "text", src: "/Hillhouse.jpg", alt: "MCH: Hidden spaces" },
   ],
   [
-    { type: "image", src: "/Greentowerinterior.jpg", alt: "2" },
-    { type: "image", src: "/Greentowerinteriorside.jpg", alt: "2" },
+    { type: "video", src: "1011248268", alt: "2" },
+    // { type: "image", src: "/Greentowerinterior.jpg", alt: "2" },
+    // { type: "image", src: "/Greentowerinteriorside.jpg", alt: "2" },
     { type: "text", src: "/Hillhouse.jpg", alt: "The Green Tower - Interior" },
   ],
 ];
-
-
 
 interface ProjectDetailsProps {
   projectCode: string;
