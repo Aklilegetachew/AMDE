@@ -15,10 +15,12 @@ export const mediaCollections: MediaItem[][] = [
     { type: "text", src: "/Hillhouse.jpg", alt: "Meskel Square " },
   ],
   [
+    { type: "video", src: "1011250451", alt: "1" },
     { type: "image", src: "/greenladerbetter.png", alt: "1" },
     { type: "text", src: "/Hillhouse.jpg", alt: "Green Tower" },
   ],
   [
+    { type: "video", src: "1011248268", alt: "4" },
     { type: "image", src: "/Hillhouse.jpg", alt: "4" },
     { type: "image", src: "/Hillhouseinterior.jpg", alt: "4" },
     { type: "text", src: "/Hillhouse.jpg", alt: "Hill House - interior" },
@@ -30,7 +32,7 @@ export const mediaCollections: MediaItem[][] = [
     { type: "text", src: "/Hillhouse.jpg", alt: "Hill House" },
   ],
   [
-    { type: "image", src: "/colorexSmall.png", alt: "5" },
+    { type: "image", src: "/ColorexSmall.png", alt: "5" },
     { type: "text", src: "/Hillhouse.jpg", alt: "Colorx" },
   ],
   [
@@ -48,6 +50,8 @@ export const mediaCollections: MediaItem[][] = [
     { type: "text", src: "/Hillhouse.jpg", alt: "The Green Tower - Interior" },
   ],
 ];
+
+
 
 interface ProjectDetailsProps {
   projectCode: string;
