@@ -1,3 +1,5 @@
+'use clients';
+
 import Link from "next/link";
 import React from "react";
 
@@ -101,7 +103,7 @@ export const GridImageViewer = () => {
         <Link
           href={"/ourprojects/1"}
           passHref
-          key={1}
+          key={2}
           className="bg-black md:col-span-3 relative w-full h-full group"
         >
           <img
@@ -118,7 +120,7 @@ export const GridImageViewer = () => {
         <Link
           href={"/ourprojects/2"}
           passHref
-          key={1}
+          key={3}
           className="bg-black relative w-full h-full group"
         >
           <img
@@ -135,7 +137,7 @@ export const GridImageViewer = () => {
         <Link
           href={"/ourprojects/3"}
           passHref
-          key={1}
+          key={4}
           className="bg-black relative w-full h-full group"
         >
           <img
@@ -152,7 +154,7 @@ export const GridImageViewer = () => {
         <Link
           href={"/ourprojects/4"}
           passHref
-          key={1}
+          key={5}
           className="bg-black relative w-full h-full group"
         >
           <img
@@ -169,7 +171,7 @@ export const GridImageViewer = () => {
         <Link
           href={"/ourprojects/5"}
           passHref
-          key={1}
+          key={6}
           className="bg-black relative w-full h-full group"
         >
           <img
@@ -185,7 +187,7 @@ export const GridImageViewer = () => {
         <Link
           href={"/ourprojects/6"}
           passHref
-          key={1}
+          key={7}
           className="bg-black md:col-span-2 relative w-full h-full group"
         >
           <img
@@ -201,7 +203,7 @@ export const GridImageViewer = () => {
         <Link
           href={"/ourprojects/7"}
           passHref
-          key={1}
+          key={8}
           className="flex-1 relative w-full h-full group"
         >
           <img
@@ -216,7 +218,7 @@ export const GridImageViewer = () => {
         <Link
           href={"/ourprojects/8"}
           passHref
-          key={1}
+          key={9}
           className="flex-1 relative w-full h-full group"
         >
           <img
