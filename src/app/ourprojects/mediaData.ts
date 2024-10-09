@@ -45,8 +45,8 @@ export const mediaCollections: MediaItem[][] = [
   ],
   [
     { type: "video", src: "1011248268", alt: "2" },
-    // { type: "image", src: "/Greentowerinterior.jpg", alt: "2" },
-    // { type: "image", src: "/Greentowerinteriorside.jpg", alt: "2" },
+    { type: "image", src: "/Greentowerinterior.jpg", alt: "2" },
+    { type: "image", src: "/Greentowerinteriorside.jpg", alt: "2" },
     { type: "text", src: "/Hillhouse.jpg", alt: "The Green Tower - Interior" },
   ],
 ];
