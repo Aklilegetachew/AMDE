@@ -59,7 +59,9 @@ const ParallaxMedia: React.FC<ParallaxMediaProps> = ({ mediaArray }) => {
           <img
             src={firstMedia.src}
             alt={firstMedia.alt || "Media image"}
-            className="object-cover w-full h-full"
+            className={`w-full h-full object-cover ${
+              firstMedia.alt === "6" ? "md:object-contain" : "md:object-cover"
+            }`}
             onError={(e) => (e.currentTarget.src = "fallback.jpg")}
           />
         ) : (
@@ -80,10 +82,9 @@ const ParallaxMedia: React.FC<ParallaxMediaProps> = ({ mediaArray }) => {
         restMedia.map((media, index) => (
           <div key={index} className="relative h-screen overflow-hidden">
             <img
-              
               src={media.src}
               alt={media.alt || "Media image"}
-              className="object-cover w-full h-full"
+              className="object-cover w-full h-full "
               onError={(e) => (e.currentTarget.src = "fallback.jpg")}
             />
           </div>
