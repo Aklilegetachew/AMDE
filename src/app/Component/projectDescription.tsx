@@ -18,7 +18,7 @@ export default function ProjectDetails({
   awards,
 }: ProjectDetailsProps) {
   return (
-    <div className="max-w-4xl mx-auto p-6 font-sans">
+    <div className="max-w-7xl mx-auto p-6 font-sans  ">
       <h1 className="text-4xl font-bold mb-4">{projectCode}</h1>
       <h2 className="text-2xl text-gray-500 mb-12">{location}</h2>
 

@@ -40,7 +40,7 @@ const SomePage = () => {
           <div className="text-center pt-28">
             <h2 className="text-4xl font-bold mb-4 mt-10">Community</h2>
           </div>
-          <p className="text-gray-700 leading-relaxed">
+          <p className="text-gray-700 leading-relaxed text-justify">
             AMDE is a strong advocate of fulfilling social responsibility in its
             area of expertise. To do that, we venture with partners with like
             mind and interest to foster public projects that would create
@@ -54,7 +54,7 @@ const SomePage = () => {
           <div className="text-center pt-28">
             <h2 className="text-4xl font-bold mb-4 mt-10">ማህበረሰብ (አቀፍ)</h2>
           </div>
-          <p className="text-gray-700 leading-relaxed">
+          <p className="text-gray-700 leading-relaxed text-justify">
             አምድ በሙያችን መስክ ማህበራዊ ሃላፊነትን መወጣት አለብን ብሎ የሚያምን ጠንካራ ተሟጋች ነው። ለዚህም፣
             ተመሳሳይ አስተሳሰብ እና ፍላጎት ካላቸው አጋሮች ጋር ማህበራዊ፣ ኢኮኖሚያዊ እና አካባቢያዊ ተፅእኖ የሚፈጥሩ
             ህዝባዊ ፕሮጀክቶችን እውን ለማድረግ በጠንካራ ትብብር እንሰራለን። ማህበረሰቡን ዋነኛ የሂደቱ ተዋናኝ

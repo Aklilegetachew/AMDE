@@ -41,6 +41,7 @@ export const mediaCollections: MediaItem[][] = [
   [
     { type: "image", src: "/meskelCityhall.jpg", alt: "8" },
     { type: "image", src: "/meskelsquareHiddenspace.jpg", alt: "8" },
+    { type: "image", src: "/meskelSquare2.jpg", alt: "8" },
     { type: "text", src: "/Hillhouse.jpg", alt: "MCH: Hidden spaces" },
   ],
   [
