@@ -137,7 +137,7 @@ const AnimatedMenu: React.FC = () => {
                           }}
                         >
                           {/* Title */}
-                          <div className="text-2xl md:text-4xl lg:text-5xl font-extrabold">
+                          <div className="text-xl md:text-3xl lg:text-4xl font-extrabold">
                             {item.title}
                           </div>
 
@@ -147,7 +147,7 @@ const AnimatedMenu: React.FC = () => {
                               hoveredIndex === null || hoveredIndex === index
                                 ? "text-[#9c9494]"
                                 : "text-gray-300"
-                            } text-2xl md:text-4xl lg:text-5xl font-extrabold`}
+                            } text-xl md:text-3xl lg:text-4xl font-extrabold`}
                           >
                             {item.subtitle}
                           </div>

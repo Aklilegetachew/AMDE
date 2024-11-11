@@ -42,7 +42,7 @@ const Home = () => {
       id: 2,
       content: <p>Colorex</p>,
       className: "md:row-span-1",
-      thumbnail: "/Colorex.jpg",
+      thumbnail: "/KKPrivate.jpg",
       name: "Colorex",
       link: "/ourprojects/1",
     },

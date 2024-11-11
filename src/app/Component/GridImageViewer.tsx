@@ -26,7 +26,7 @@ export const GridImageViewer = () => {
       id: 2,
       content: <p>Colorex</p>,
       className: "md:row-span-1",
-      thumbnail: "/Colorex.jpg",
+      thumbnail: "/KKPrivate.jpg",
       name: "Colorex",
       link: "/ourprojects/1",
     },
@@ -175,7 +175,7 @@ export const GridImageViewer = () => {
           className="bg-black relative w-full h-full group"
         >
           <img
-            src="/ColerxCut.jpg"
+            src="/KKPrivate.jpg"
             alt="Image 6"
             className="h-full w-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300  aspect-auto"
           />
@@ -191,7 +191,7 @@ export const GridImageViewer = () => {
           className="bg-black md:col-span-2 relative w-full h-full group"
         >
           <img
-            src="/miniPlaza.jpg"
+            src="/meskelSquareClean.jpg"
             alt="Image 7"
             className="h-full w-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300  aspect-auto "
           />
