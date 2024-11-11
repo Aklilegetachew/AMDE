@@ -66,7 +66,7 @@ export const textDetails: ProjectDetailsProps[] = [
     projectCode: "MCH: Meskel Square to City Hall Street, Addis Ababa",
     location: "3.5 km pedestrian walkway",
     description:
-      "The project aims to maintain the old structure and function while enhancing its linkage with adjacent functions through a well-designed mobility system. It spans 3.5km of refurbished pedestrian walkway connecting two plazas. Mobility, both pedestrian and vehicular, governs the reorganization of the spaces.",
+      "Cited at the heart of Addis Ababa, the whole project is intended to keep the old structure and function intact and enhance its linkage with the adjacent functions, through well designed mobility system, and introduction of public facilities. The project begins with the re-imagination of the vast plaza of the Meskel square and ends with a mini plaza linked in-between by the 3.5km pedestrian refurbished pedestrian walkway. Mobility (both pedestrian and vehicular) was the central governing element in the reorganization of the various spaces at the two plazas and recreating the 3.5 km pedestrian walkway.    ",
     area: "Sub-consultant",
     completionYear: "Construction Completed",
     awards: [],
@@ -75,7 +75,7 @@ export const textDetails: ProjectDetailsProps[] = [
     projectCode: "Green Tower",
     location: "3B+G+15 Apartment Building",
     description:
-      "A luxurious apartment building with well-integrated green spaces. The design emphasizes a connected green environment from the lavish garden at the reception to the penthouse's indoor and outdoor gardens, featuring public spaces with 360-degree views.",
+      "Aiming at creating a luxurious residence, EMADA Homes is an apartment building with a well-integrated green to each of the spaces. The central aim is to create one whole connected green space beginning from the reception’s lavish garden leading to the intermediary public space, which is serving as an elevated public space privileged with a 360 view and culminating with a pent houses’ indoor and outdoor garden.",
     area: "Consultant",
     completionYear: "Pending construction",
     awards: [],
@@ -93,7 +93,7 @@ export const textDetails: ProjectDetailsProps[] = [
     projectCode: "Hill House",
     location: "Yeka Mountain, Addis Ababa",
     description:
-      "A private residence on a steep gradient with dual access, offering a view of the city and adjacent green landscapes. Wide glass facades draw in views, with three-level access to the surrounding landscape due to the sloping terrain.",
+      "Sitting on one of the hills of Addis, the Yeka mountain, the private residence relishes the city view rested within the green environment. With a dual access to the site, the project is socketed at steeping gradient allowing multiple grounds. It draws in the city view and the adjacent green into the spaces through wide glass façade. Due to the sloping land, multiple grounds are availed with three level access to the adjacent green landscape.",
     area: "Consultant",
     completionYear: "Under Construction",
     awards: [],
@@ -102,7 +102,7 @@ export const textDetails: ProjectDetailsProps[] = [
     projectCode: "Hill House - Interior",
     location: "",
     description:
-      "The interior design uses earthy shades of brown and white, with natural light playing a key role in illuminating the spaces through wide curtain walls. The spacious interior is achieved by minimizing walls between spaces.",
+      "Shades of brown with a blend of white is utilized in the interiors to create earthly feeling. Natural light plays a major role in illuminating the spaces through the wide curtain walls. Spacious interior is achieved by avoiding separating walls between spaces. ",
     area: "Consultant",
     completionYear: "Under Construction",
     awards: [],
@@ -130,7 +130,7 @@ export const textDetails: ProjectDetailsProps[] = [
     projectCode: "MCH: Mini Plaza",
     location: "Churchill Avenue, Addis Ababa",
     description:
-      "The physical and visual connection between Churchill Avenue and the City Hall is enhanced by the mini plaza, serving as both a connector for commuters and a destination.",
+      "The physical and visual connection of the Churchill avenue and the city hall is further accentuated by the mini plaza. It serves as both a connector for the commuters and a place of destination.",
     area: "Sub-consultant",
     completionYear: "Construction Completed",
     awards: [],
@@ -139,7 +139,7 @@ export const textDetails: ProjectDetailsProps[] = [
     projectCode: "MCH: Hidden Spaces",
     location: "",
     description:
-      "A replica is constructed to keep the existing iconic wall intact while incorporating functionality. It includes hidden spaces serving the public, with landscaped seats in areas without attached programs.",
+      "To keep the existing iconic wall intact and incorporate functionality along the line, a replica is constructed that has hidden spaces serving the public. Landscaped seats are provided at places where there are no attached programs.",
     area: "Sub-consultant",
     completionYear: "Construction Completed",
     awards: [],
