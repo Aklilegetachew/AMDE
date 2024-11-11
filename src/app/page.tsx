@@ -82,7 +82,7 @@ const Home = () => {
       id: 13,
       content: <p>Image 13 Content</p>,
       className: "md:row-span-3  md:col-span-2 object-bottom",
-      thumbnail: "/meskelSquarecrop.jpg",
+      thumbnail: "/meskelSquareClean.jpg",
       name: "Meskel Square",
       link: "/ourprojects/6",
     },
