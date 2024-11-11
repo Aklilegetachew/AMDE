@@ -40,13 +40,7 @@ const ResedntialPage = () => {
       title: "Hill House",
       location: "Yeka Mountain, Addis Ababa",
     },
-    {
-      id: 5,
-      src: "/colorex-3x4.jpg",
-      alt: "Colorex",
-      title: "Colorex",
-      location: "9-floor apartment building",
-    },
+ 
 
     {
       id: 8,

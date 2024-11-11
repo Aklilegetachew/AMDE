@@ -33,6 +33,13 @@ const Commercial = () => {
       title: "MCH: Hidden spaces",
       location: "Preserving Heritage",
     },
+    {
+      id: 5,
+      src: "/KKPrivate.jpg",
+      alt: " Gallery stair",
+      title: "Gallery stair",
+      location: "Unifying Vertical Gallery for Company Identity",
+    },
   ];
   return (
     <div className={`${lexendDeca.className}`}>
