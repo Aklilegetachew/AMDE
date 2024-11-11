@@ -24,7 +24,7 @@ export default function ProjectDetails({
 
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-14">
         <div className="col-span-3">
-          <p className="text-xl">{description}</p>
+          <p className="text-xl  leading-relaxed text-justify">{description}</p>
         </div>
         <div>
           <h3 className="text-xl font-semibold mb-2">Status</h3>

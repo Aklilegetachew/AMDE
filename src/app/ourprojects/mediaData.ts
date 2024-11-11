@@ -31,8 +31,11 @@ export const mediaCollections: MediaItem[][] = [
     { type: "text", src: "/Hillhouse.jpg", alt: "Hill House" },
   ],
   [
-    { type: "image", src: "/ColorexSmall.png", alt: "5" },
-    { type: "text", src: "/Hillhouse.jpg", alt: "Colorx" },
+    { type: "image", src: "/KKPrivate.jpg", alt: "5" },
+    { type: "image", src: "/Gallerystair1.jpg", alt: "5" },
+    { type: "image", src: "/Gallerystair2.jpg", alt: "5" },
+    { type: "image", src: "/Gallerystair3.jpg", alt: "5" },
+    { type: "text", src: "/Hillhouse.jpg", alt: "Gallery stair" },
   ],
   [
     { type: "image", src: "/meskelSquareClean.jpg", alt: "7" },
@@ -108,10 +111,10 @@ export const textDetails: ProjectDetailsProps[] = [
     awards: [],
   },
   {
-    projectCode: "Colorex",
-    location: "9-floor apartment building ",
+    projectCode: "Gallery stair",
+    location: "",
     description:
-      "A nine-story residential apartment that experiments with bold colors, assigning each unit a distinct color palette. The building provokes interaction with its environment through its daring and playful use of color.",
+      "The stair way is best located as the tying element for all the floors beginning from the entry way. The theme of the company is reconstructed around the stair way conceptualized as the vertical gallery. This vertical gallery contains unifying color and material beginning from the reception area, the company’s recognition and achievement awards and visual elements which communicate essential materials to the guests.",
     area: "Consultant ",
     completionYear: "Conceptual Stage",
     awards: [],

@@ -179,8 +179,8 @@ export const GridImageViewer = () => {
             alt="Image 6"
             className="h-full w-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300  aspect-auto"
           />
-          <div className="absolute bottom-0 right-0 w-full bg-opacity-50 text-black px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            Colorex
+          <div className="absolute bottom-0 right-0 w-full bg-opacity-50 text-white px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          Gallery Stair
           </div>
         </Link>
 
