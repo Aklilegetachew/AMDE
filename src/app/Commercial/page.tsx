@@ -21,7 +21,7 @@ const Commercial = () => {
 
     {
       id: 6,
-      src: "/miniPlaza.jpg",
+      src: "/meskelSquareClean.jpg",
       alt: "MCH: Mini Plaza",
       title: "MCH: Mini Plaza",
       location: "Churchill Avenue, Addis Ababa",
