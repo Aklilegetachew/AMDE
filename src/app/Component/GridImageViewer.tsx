@@ -1,4 +1,4 @@
-'use clients';
+"use clients";
 
 import Link from "next/link";
 import React from "react";
@@ -124,7 +124,7 @@ export const GridImageViewer = () => {
           className="bg-black relative w-full h-full group"
         >
           <img
-            src="/GreenTowerfulltallCrop.jpg"
+            src="/GreenTowerFront.jpg"
             alt="Image 3"
             className="h-full w-full object-cover object-right grayscale group-hover:grayscale-0 transition-all duration-300 aspect-auto"
           />
@@ -180,7 +180,7 @@ export const GridImageViewer = () => {
             className="h-full w-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300  aspect-auto"
           />
           <div className="absolute bottom-0 right-0 w-full bg-opacity-50 text-white px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          Gallery Stair
+            Gallery Stair
           </div>
         </Link>
 
