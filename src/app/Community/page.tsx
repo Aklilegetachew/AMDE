@@ -62,7 +62,7 @@ const SomePage = () => {
           </p>
         </div>
       </div>
-      <div className="flex flex-col p-2 justify-center items-center md:col-span-2 ">
+      <div className="flex flex-col p-2 justify-center items-center md:col-span-2 lg:mb-32">
         <p className=" w-full text-base font-bold leading-[22.5px] paragcolor text-center">
           Detail version is coming soon!
         </p>

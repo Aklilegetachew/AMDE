@@ -4,8 +4,10 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import HamburgerMenu from "../../../public/ham-thin1.svg";
+import WhiteHamburgerMenu from "../../../public/whiteHam.svg";
 import X from "../../../public/x.svg";
 import closeIcon from "../../../public/icons8-close.svg";
+import { usePathname } from "next/navigation";
 
 const menuItems = [
   { title: "WE ARE AMDE", subtitle: "አምድ ነን", href: "/aboutus" },
@@ -18,10 +20,37 @@ const menuItems = [
 const AnimatedMenu: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
+  const [isDarkBackground, setIsDarkBackground] = useState(false);
+  const pathname = usePathname();
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  useEffect(() => {
+    console.log(":Path Name", pathname);
+    const handleScroll = () => {
+      const threshold = 200;
+      const scrollPosition = window.scrollY;
+      if (pathname == "/") {
+        setIsDarkBackground(scrollPosition > threshold);
+      } else if (
+        pathname == "/ourprojects/1" ||
+        pathname == "/ourprojects/4" ||
+        pathname == "/ourprojects/6" ||
+        pathname == "/ourprojects/7"
+      ) {
+        setIsDarkBackground(true);
+      } else {
+        setIsDarkBackground(false);
+      }
+    };
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const menuVariants = {
     closed: {
@@ -58,8 +87,8 @@ const AnimatedMenu: React.FC = () => {
         className="z-51 bg-transparent border-none cursor-pointer text-2xl md:text-3xl lg:text-4xl"
         aria-label="Toggle menu"
       >
-        <span className="bg-red">
-          <HamburgerMenu />
+        <span className="bg-white">
+          {isDarkBackground ? <WhiteHamburgerMenu /> : <HamburgerMenu />}
         </span>
       </button>
       <AnimatePresence>
