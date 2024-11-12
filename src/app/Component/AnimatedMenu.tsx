@@ -181,7 +181,7 @@ const AnimatedMenu: React.FC = () => {
                             {item.subtitle}
                           </div>
                         </motion.div>
-                        <hr />
+                        {/* <hr /> */}
                       </Link>
                     </motion.div>
                   ))}
