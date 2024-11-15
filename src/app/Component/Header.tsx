@@ -19,7 +19,8 @@ const Header: React.FC = () => {
         pathname == "/ourprojects/1" ||
         pathname == "/ourprojects/4" ||
         pathname == "/ourprojects/6" ||
-        pathname == "/ourprojects/7"
+        pathname == "/ourprojects/7" ||
+        pathname == "/ourprojects/8"
       ) {
         setIsDarkBackground(true);
       } else {

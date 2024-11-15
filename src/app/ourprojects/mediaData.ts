@@ -48,7 +48,10 @@ export const mediaCollections: MediaItem[][] = [
     { type: "text", src: "/Hillhouse.jpg", alt: "MCH: Hidden spaces" },
   ],
   [
-    { type: "video", src: "1011248268", alt: "2" },
+    // { type: "video", src: "1011248268", alt: "2" },
+    { type: "image", src: "/GreenInt1.jpg", alt: "2" },
+    { type: "image", src: "/GreenInt2.jpg", alt: "2" },
+    { type: "image", src: "/GreenInt3.jpg", alt: "2" },
     { type: "image", src: "/Greentowerinterior.jpg", alt: "2" },
     { type: "image", src: "/Greentowerinteriorside.jpg", alt: "2" },
     { type: "text", src: "/Hillhouse.jpg", alt: "The Green Tower - Interior" },
