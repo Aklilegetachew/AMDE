@@ -11,6 +11,7 @@ interface TeamMember {
   qualifications?: string;
   description: string[];
   bullets: string[];
+  Finishing: string[];
 }
 const TeamPage = () => {
   const teamMembers = [
@@ -31,6 +32,9 @@ const TeamPage = () => {
         "-	Urban design project for Basha Wolde Chilot area",
         "-	Development of master plan for the 13 University projects under GTZ-IA University capacity building program.",
       ],
+      Finishing: [
+        "She is also a passionate researcher in areas of socio-spatial dialogue and its manifestations. Being a faculty member of the Institute of Architecture, Building constructions and City Development (EIABC, Addis Ababa University) for almost two decades, has infused her with the need for research based approach for every community based projects. In this process, AMDE strives to find the intersection between research and the implementation of ideas. ",
+      ],
     },
     {
       name: "Aziza Abdulfetah",
@@ -43,6 +47,7 @@ const TeamPage = () => {
         "She has been instrumental in developing the practice's sustainable design approach.",
       ],
       bullets: [],
+      Finishing: [],
     },
     {
       name: "Beminet Yeshiwas",
@@ -55,6 +60,7 @@ const TeamPage = () => {
         "She has been instrumental in developing the practice's sustainable design approach.",
       ],
       bullets: [],
+      Finishing: [],
     },
     {
       name: "Ruth Mekonnen",
@@ -67,6 +73,7 @@ const TeamPage = () => {
         "She has been instrumental in developing the practice's sustainable design approach.",
       ],
       bullets: [],
+      Finishing: [],
     },
     {
       name: "Zelalem Negash",
@@ -79,6 +86,7 @@ const TeamPage = () => {
         "He has been instrumental in developing the practice's sustainable design approach.",
       ],
       bullets: [],
+      Finishing: [],
     },
   ];
   const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);

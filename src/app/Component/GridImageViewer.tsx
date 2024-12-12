@@ -175,7 +175,7 @@ export const GridImageViewer = () => {
           className="bg-black relative w-full h-full group"
         >
           <img
-            src="/KKPrivate.jpg"
+            src="/Gallerystair2.jpg"
             alt="Image 6"
             className="h-full w-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300  aspect-auto"
           />

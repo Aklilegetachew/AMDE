@@ -8,6 +8,7 @@ import GetInTouch from "../Component/GetInTouch";
 import Footer from "../Component/Footer";
 import { Lexend_Deca } from "next/font/google";
 import TeamSection from "../Component/TeamSection";
+import Partners from "./Component/Partners";
 
 const lexendDeca = Lexend_Deca({
   subsets: ["latin"],
@@ -47,8 +48,9 @@ export default function AboutUs() {
       <Header />
       <About />
       <Divider />
-      {/* <TeamSection teamMembers={teamMembers} /> */}
+      
       <Founders />
+      <Partners />
       <GetInTouch />
 
       <Footer />

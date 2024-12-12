@@ -14,6 +14,7 @@ interface ProfileModalProps {
     qualifications?: string;
     description: string[];
     bullets: string[];
+    Finishing: string[];
   };
 }
 
@@ -30,7 +31,7 @@ export default function ProfileModal({
           animate={{ y: 0 }}
           exit={{ y: "100%" }}
           transition={{ type: "spring", damping: 60, stiffness: 300 }}
-          className="fixed inset-0 bg-[#e5e5e5] z-50 overflow-y-auto"
+          className="fixed inset-0 bg-[#cecdcd] z-50 overflow-y-auto"
         >
           <div className="relative min-h-full">
             <button onClick={onClose} className="absolute right-6 top-6 z-50">
@@ -67,7 +68,7 @@ export default function ProfileModal({
                     </motion.p>
                   )}
 
-                  <div className="space-y-6">
+                  <div className="space-y-6 text-justify">
                     {member.description.map((paragraph, index) => (
                       <motion.p
                         key={index}
@@ -80,7 +81,7 @@ export default function ProfileModal({
                       </motion.p>
                     ))}
                   </div>
-                  <div className="space-y-6">
+                  <div className="space-y-6 text-justify">
                     {member.bullets.map((paragraph, index) => (
                       <motion.p
                         key={index}
@@ -88,6 +89,19 @@ export default function ProfileModal({
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5 + index * 0.1 }}
                         className="text-gray-800 leading-relaxed pl-6"
+                      >
+                        {paragraph}
+                      </motion.p>
+                    ))}
+                  </div>
+                  <div className="space-y-6 mt-4 w-full text-justify">
+                    {member.Finishing.map((paragraph, index) => (
+                      <motion.p
+                        key={index}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.5 + index * 0.1 }}
+                        className="w- full text-gray-800 leading-relaxed "
                       >
                         {paragraph}
                       </motion.p>
