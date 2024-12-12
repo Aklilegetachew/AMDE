@@ -49,7 +49,7 @@ export const mediaCollections: MediaItem[][] = [
   ],
   [
     // { type: "video", src: "1011248268", alt: "2" },
-    { type: "image", src: "/GreenInt1.jpg", alt: "2" },
+    { type: "image", src: "/greenInt1.jpg", alt: "2" },
     { type: "image", src: "/GreenInt2.jpg", alt: "2" },
     { type: "image", src: "/GreenInt3.jpg", alt: "2" },
     { type: "image", src: "/Greentowerinterior.jpg", alt: "2" },
