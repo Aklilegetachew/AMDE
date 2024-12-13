@@ -20,20 +20,24 @@ const Partners = () => {
   ];
 
   return (
-    <div className="py-6 my-28">
-      <h2 className="text-2xl font-semibold text-center mb-10">OUR PARTNERS</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 w-3xl mx-auto">
-        {teamMembers.map((member, index) => (
-          <div key={index} className="text-center">
-            <img
-              src={member.image}
-              alt={member.name}
-              className="mx-auto w-80 h-80  object-contain"
-            />
-          </div>
-        ))}
+    <section className="team-section">
+      <div className="py-6 my-28">
+        <h2 className="text-2xl font-semibold text-center mb-10">
+          OUR PARTNERS
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 w-3xl mx-auto">
+          {teamMembers.map((member, index) => (
+            <div key={index} className="text-center">
+              <img
+                src={member.image}
+                alt={member.name}
+                className="mx-auto w-80 h-80  object-contain"
+              />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

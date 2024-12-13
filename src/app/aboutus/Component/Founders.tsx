@@ -91,48 +91,48 @@ const TeamPage = () => {
   ];
   const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
   return (
-    <div className="py-6 my-40">
-      <h2 className="text-2xl font-semibold text-center mb-12">OUR TEAM</h2>
-      <main className="container  px-0">
-        <div className="flex flex-wrap">
-          {teamMembers.map((member, index) => (
-            <div
-              key={index}
-              className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5"
-            >
-              <div className="relative pb-[120%]">
-                <Image
-                  src={member.imageSrc}
-                  alt={member.name}
-                  fill
-                  className={member.style}
-                  // style={{
-                  //   filter: "grayscale(1) contrast(1.5) brightness(0.9)",
-                  // }}
-                />
-              </div>
-              <div className="p-4 flex bg-white w-full">
-                <div className="w-3/4">
-                  <h2 className="text-lg font-semibold">{member.name}</h2>
-                  <p className="text-gray-600 text-sm">{member.title}</p>
+    <section className="team-section">
+      <div className="h-auto py-6 my-40">
+        <h2 className="text-2xl font-semibold text-center mb-12">OUR TEAM</h2>
+        <main className="w-full">
+          <div className="flex flex-wrap">
+            {teamMembers.map((member, index) => (
+              <div
+                key={index}
+                className="w-[100%] sm:w-[50%] md:w-[25%] lg:w-[20%] xl:w-[20%]"
+              >
+                <div className="relative w-full pb-[150%]">
+                  <Image
+                    src={member.imageSrc}
+                    alt={member.name}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
-                <button
-                  className="w-1/4 h-10 ml-4 px-2 py-2 bg-gray-200 text-gray-800 rounded-lg text-xs"
-                  onClick={() => setSelectedMember(member)}
-                >
-                  Profile
-                </button>
+                <div className="flex justify-center items-center">
+                  <div className="p-4 bg-white w-full">
+                    <h2 className="text-base">{member.name}</h2>
+                    <p className="text-gray-600 text-sm">{member.title}</p>
+                  </div>
+                  <button
+                    className="w-1/4 h-10 ml-4 px-2 py-2 bg-gray-200 text-gray-800 rounded-lg text-xs"
+                    onClick={() => setSelectedMember(member)}
+                  >
+                    Profile
+                  </button>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
-      </main>
-      <ProfileModal
-        isOpen={!!selectedMember}
-        onClose={() => setSelectedMember(null)}
-        member={selectedMember || teamMembers[0]}
-      />
-    </div>
+            ))}
+          </div>
+        </main>
+
+        <ProfileModal
+          isOpen={!!selectedMember}
+          onClose={() => setSelectedMember(null)}
+          member={selectedMember || teamMembers[0]}
+        />
+      </div>
+    </section>
   );
 };
 

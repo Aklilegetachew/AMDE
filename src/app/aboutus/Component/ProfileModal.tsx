@@ -45,7 +45,7 @@ export default function ProfileModal({
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2 }}
-                    className="text-4xl md:text-6xl font-bold mb-2"
+                    className="text-2xl md:text-4xl font-bold mb-2"
                   >
                     {member.name}
                   </motion.h1>
@@ -53,7 +53,7 @@ export default function ProfileModal({
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3 }}
-                    className="text-4xl md:text-6xl font-bold text-white mb-6"
+                    className="text-1xl md:text-4xl font-bold text-white mb-6"
                   >
                     {member.title}
                   </motion.h2>
