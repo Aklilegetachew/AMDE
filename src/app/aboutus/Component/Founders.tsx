@@ -82,8 +82,7 @@ const TeamPage = () => {
       style: "object-cover object-top grayscale",
       qualifications: "",
       description: [
-        "Zelalem brings extensive experience in commercial and residential architecture.",
-        "He has been instrumental in developing the practice's sustainable design approach.",
+        "Zelalem Negash is a dedicated professional with expertise in civil engineering. He is an aspiring engineer specializing in construction and project management. He has experience leading complex projects and excels in planning, execution, and team leadership. With hands-on experience, like a 20-floored apartment building, Zelalem brings a detail-oriented approach to planning, resource management, and team coordination. Known for his meticulous approach to quality, safety, and sustainability, Zelalem ensures projects are delivered on time exceeding clien expectations. Recognized as a problem solver and equipped with reach leadership skills, Zelalem hrives in challenging environments, ensuring projects meet their quality, safety, budget, and imeline objectives. He is passionate about innovation and aims to contribute to the future o engineering by creating efficient and resilient structures that stand the test of time.",
       ],
       bullets: [],
       Finishing: [],

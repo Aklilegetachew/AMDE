@@ -35,7 +35,7 @@ const Commercial = () => {
     },
     {
       id: 5,
-      src: "/KKPrivate.jpg",
+      src: "/Gallerystair2.jpg",
       alt: " Gallery stair",
       title: "Gallery stair",
       location: "Unifying Vertical Gallery for Company Identity",
