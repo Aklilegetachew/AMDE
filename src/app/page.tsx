@@ -5,8 +5,7 @@ import Header from "./Component/Header";
 import Footer from "./Component/Footer";
 import { GridImageViewer } from "./Component/GridImageViewer";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Link from "next/link";
-import { ParallaxScroll } from "./Component/ui/parallax-scroll";
+
 
 import { Lexend_Deca } from "next/font/google";
 

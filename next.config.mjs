@@ -9,14 +9,10 @@ const nextConfig = {
 
     return config;
   },
-  // i18n: {
-  //   locales: ["en", "am"], 
-    
-  //   defaultLocale: "en",
-  // },
-  output: "export",
-  assetPrefix: "/",
-  trailingSlash: true,
+  i18n: {
+    locales: ["en", "am"], // 'en' for English, 'am' for Amharic
+    defaultLocale: "en",
+  },
 };
 
 export default nextConfig;
