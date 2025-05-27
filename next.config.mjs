@@ -13,6 +13,9 @@ const nextConfig = {
     locales: ["en", "am"], // 'en' for English, 'am' for Amharic
     defaultLocale: "en",
   },
+  output: "export",
+  assetPrefix: "/",
+  trailingSlash: true,
 };
 
 export default nextConfig;
