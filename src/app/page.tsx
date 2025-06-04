@@ -15,7 +15,7 @@ if (typeof window !== "undefined") {
 }
 const lexendDeca = Lexend_Deca({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"], // Optional: specify weights
+  weight: ["300", "400", "500", "600", "700"], 
 });
 
 const Home = () => {

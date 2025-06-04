@@ -47,9 +47,9 @@ export default function AboutUs() {
     <main className={`${lexendDeca.className}`}>
       <Header />
       <About />
-      {/* <Divider /> */}
+      <Divider />
       
-      <Founders />
+      {/* <Founders /> */}
       <Partners />
       <GetInTouch />
 
